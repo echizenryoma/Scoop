@@ -8,10 +8,6 @@
     },
     "url": "http://www.torchsoft.com/download/RegistryWorkshop_chs.exe#/dl.7z",
     "hash": "13ebf41340bab067e407e06b5de4931bb80b79cc08fb8543b2913d9f3b5f81bb",
-    "bin": [
-        "RegWorkshop.exe",
-        "RegWorkshopX64.exe"
-    ],
     "architecture": {
         "32bit": {
             "shortcuts": [
@@ -19,10 +15,19 @@
                     "RegWorkshop.exe",
                     "RegWorkshop"
                 ]
+            ],
+            "bin": [
+                "RegWorkshop.exe"
             ]
         },
         "64bit": {
             "shortcuts": [
+                [
+                    "RegWorkshopX64.exe",
+                    "RegWorkshop"
+                ]
+            ],
+            "bin": [
                 [
                     "RegWorkshopX64.exe",
                     "RegWorkshop"
