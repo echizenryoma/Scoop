@@ -18,7 +18,10 @@
             ]
         }
     },
-    "persist": "portable",
+    "persist": [
+        "content",
+        "portable"
+    ],
     "pre_install": [
         "$unzip_dir = (Get-ChildItem -Path $original_dir -Directory)[0].FullName",
         "Move-Item -Path \"${unzip_dir}\\*\" -Destination \"$original_dir\" -Force",
