@@ -5,7 +5,12 @@
     "url": "https://cdn.ipip.net/17mon/besttrace.exe",
     "hash": "46440fa4be0113e789145da94faa36c2b86ac2015582d14039756ed837f5c7ff",
     "innosetup": true,
-    "bin": "17monipdb.exe",
+    "bin": [
+        [
+            "17monipdb.exe",
+            "besttrace.exe"
+        ]
+    ],
     "checkver": {
         "url": "https://www.ipip.net/product/client.html#besttrace",
         "regex": "V(?<version>(\\d+(\\.\\d+)+))"
