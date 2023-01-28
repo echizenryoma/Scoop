@@ -11,6 +11,12 @@
             "besttrace.exe"
         ]
     ],
+    "shortcuts": [
+        [
+            "17monipdb.exe",
+            "BestTrace"
+        ]
+    ],
     "checkver": {
         "url": "https://www.ipip.net/product/client.html#besttrace",
         "regex": "V(?<version>(\\d+(\\.\\d+)+))"
