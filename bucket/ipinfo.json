@@ -30,7 +30,7 @@
         }
     },
     "pre_install": [
-        "$exe_path = (Get-ChildItem -Path $original_dir -File)[0].FullName",
+        "$exe_path = (Get-ChildItem -Path \"$original_dir\\*\" -Include \"*.exe\" -File)[0].FullName",
         "Rename-Item -Path \"${exe_path}\" -NewName \"ipinfo.exe\" -Force"
     ],
     "checkver": {
