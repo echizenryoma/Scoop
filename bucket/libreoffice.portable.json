@@ -8,6 +8,12 @@
     },
     "url": "https://download.documentfoundation.org/libreoffice/portable/7.4.5/LibreOfficePortablePrevious_7.4.5_MultilingualAll.paf.exe#/dl.7z",
     "hash": "0c351279fca9d0253d80b9298b4d3b72fa9ee7532fb8f8dc27bd05b0c280c7b3",
+    "pre_install": [
+        "$plugins_dir = Join-Path $original_dir '$PLUGINSDIR'",
+        "Remove-Item –Path $plugins_dir -Recurse -Force",
+        "$portable_exe = (Get-ChildItem -Path \"$original_dir\\LibreOfficePortable*.exe\" -File)[0].FullName",
+        "Rename-Item -Path $portable_exe -NewName 'LibreOfficePortable.exe' -Force"
+    ],
     "shortcuts": [
         [
             "LibreOfficePortable.exe",
