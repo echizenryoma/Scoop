@@ -23,17 +23,9 @@
     "persist": [
         ".cn",
         ".core",
-        "log",
-        "GeoIP.dat",
-        "GeoSite.dat"
+        "log"
     ],
     "pre_install": [
-        "if (!(Test-Path \"$persist_dir\\GeoIP.dat\")) {",
-        "    New-Item -Path \"$dir\\GeoIP.dat\" -ItemType File | Out-Null",
-        "}",
-        "if (!(Test-Path \"$persist_dir\\GeoSite.dat\")) {",
-        "    New-Item -Path \"$dir\\GeoSite.dat\" -ItemType File | Out-Null",
-        "}",
         "$exe_path = (Get-ChildItem -Path \"$original_dir\\*\" -Include \"*.exe\" -File)[0].FullName",
         "Rename-Item -Path \"${exe_path}\" -NewName \"Clash.Mini.exe\" -Force"
     ],
