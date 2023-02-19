@@ -21,7 +21,7 @@
         ]
     ],
     "persist": [
-        ".cn",
+        ".cm",
         ".core",
         "log",
         "rules.d",
@@ -33,16 +33,16 @@
     ],
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\cache.db\")) {",
-        "    New-Item -Path \"$dir\\cache.db\" -ItemType File | Out-Null",
+        "    New-Item -Path \"$persist_dir\\cache.db\" -ItemType File | Out-Null",
         "}",
         "if (!(Test-Path \"$persist_dir\\Country.mmdb\")) {",
-        "    New-Item -Path \"$dir\\Country.mmdb\" -ItemType File | Out-Null",
+        "    New-Item -Path \"$persist_dir\\Country.mmdb\" -ItemType File | Out-Null",
         "}",
         "if (!(Test-Path \"$persist_dir\\GeoIP.dat\")) {",
-        "    New-Item -Path \"$dir\\GeoIP.dat\" -ItemType File | Out-Null",
+        "    New-Item -Path \"$persist_dir\\GeoIP.dat\" -ItemType File | Out-Null",
         "}",
         "if (!(Test-Path \"$persist_dir\\GeoSite.dat\")) {",
-        "    New-Item -Path \"$dir\\GeoSite.dat\" -ItemType File | Out-Null",
+        "    New-Item -Path \"$persist_dir\\GeoSite.dat\" -ItemType File | Out-Null",
         "}",
         "$exe_path = (Get-ChildItem -Path \"$original_dir\\*\" -Include \"*.exe\" -File)[0].FullName",
         "Rename-Item -Path \"${exe_path}\" -NewName \"Clash.Mini.exe\" -Force"
