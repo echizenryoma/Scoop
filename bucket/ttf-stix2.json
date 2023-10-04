@@ -2,6 +2,10 @@
     "version": "v2.13b171",
     "description": "OpenType Unicode fonts for Scientific, Technical, and Mathematical texts",
     "homepage": "https://github.com/stipub/stixfonts",
+    "license": {
+        "identifier": "Shareware",
+        "url": "https://github.com/stipub/stixfonts/raw/master/OFL.txt"
+    },
     "url": "https://github.com/stipub/stixfonts/raw/v2.13b171/zipfiles/static_ttf.zip",
     "hash": "c9fd038ffc6cc179f402fffe1b745a9fb6b4470b5f0a8a7e5cf1d5c50d67b837",
     "installer": {
