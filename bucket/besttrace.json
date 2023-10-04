@@ -2,6 +2,7 @@
     "version": "3.8.0",
     "description": "Initiate a traceroute request from a Windows device with a link visualization.",
     "homepage": "https://www.ipip.net/",
+    "license": "Freeware",
     "url": "https://cdn.ipip.net/17mon/besttrace.exe",
     "hash": "46440fa4be0113e789145da94faa36c2b86ac2015582d14039756ed837f5c7ff",
     "innosetup": true,
