@@ -1,47 +1,46 @@
 {
     "version": "1.6",
-    "description": "This software is designed to simplify operations such as ; creating VHD and VHDX files, adding them to boot menu and Automatically mounting at system startup. Partial ISO support is also available.",
+    "homepage": "https://www.sordum.org/backup-start-menu-layout",
+    "description": "A simple app that allows users to backup and restore their StartMenu layout.",
     "license": {
         "identifier": "Freeware",
         "url": "https://www.sordum.org/eula/"
     },
-    "homepage": "https://www.sordum.org",
     "url": "https://www.sordum.org/files/download/backup-start-menu-layout/BackupSML.zip",
     "hash": "cf79fe0e05003687427845b502e29b80e57fb2fd0af350d90d047f5432b51997",
+    "extract_dir": "BackupSML",
     "architecture": {
-        "64bit": {
-            "shortcuts": [
-                [
-                    "BackupSML_x64.exe",
-                    "Sordum\\Backup Start Menu Layout"
-                ]
-            ]
-        },
         "32bit": {
+            "pre_install": "Remove-Item \"$dir\\BackupSML_x64.exe\" | Out-Null",
+            "bin": "BackupSML.exe",
             "shortcuts": [
                 [
                     "BackupSML.exe",
-                    "Sordum\\Backup Start Menu Layout"
+                    "Backup Start Menu Layout"
+                ]
+            ]
+        },
+        "64bit": {
+            "pre_install": "Remove-Item \"$dir\\BackupSML.exe\" | Out-Null",
+            "bin": [
+                [
+                    "BackupSML_x64.exe",
+                    "BackupSML"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "BackupSML_x64.exe",
+                    "Backup Start Menu Layout"
                 ]
             ]
         }
     },
-    "persist": "MenuLayouts",
-    "pre_install": [
-        "$AppPath = (Get-ChildItem -Path $original_dir -Recurse -Include '*.exe')[0].Directory",
-        "Copy-Item -Path $(Join-Path $AppPath '*') -Destination $original_dir -Recurse -Force",
-        "Remove-Item -Path $AppPath -Recurse -Force"
+    "persist": [
+        "BackupSML.ini",
+        "MenuLayouts"
     ],
-    "checkver": {
-        "script": [
-            "$title = 'Backup Start Menu Layout'",
-            "$page = Invoke-WebRequest -UseBasicParsing -Uri \"https://www.sordum.org/?s=$title\"",
-            "$obj = ($page.Links | Where-Object title -Match $title)[0]",
-            "$version = ($obj.title -split \"\\s\" -match \"\\d+(\\.\\d+)+\")[0] -Replace 'v', ''",
-            "Write-Output $version"
-        ],
-        "regex": "(?<version>.*)"
-    },
+    "checkver": "Backup\\sStart\\sMenu\\sLayout\\sv([\\d.]+)",
     "autoupdate": {
         "url": "https://www.sordum.org/files/download/backup-start-menu-layout/BackupSML.zip"
     }
