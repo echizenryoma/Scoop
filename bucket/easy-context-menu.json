@@ -9,7 +9,7 @@
     "url": "https://www.sordum.org/files/easy-context-menu/ec_menu.zip",
     "hash": "e28b9c0f52ce7ecd28a83ed18ab9132e446aa8c0199f5a0156b1252a867c7ac5",
     "pre_install": [
-        "$AppPath = (Get-ChildItem -Path $original_dir -Recurse -Include '*.exe')[0].Directory",
+        "$AppPath = (Get-ChildItem -Path $original_dir -Recurse -Include 'EcMenu.exe')[0].Directory",
         "Copy-Item -Path $(Join-Path $AppPath '*') -Destination $original_dir -Recurse -Force",
         "Remove-Item -Path $AppPath -Recurse -Force"
     ],
