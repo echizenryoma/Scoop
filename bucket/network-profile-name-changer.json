@@ -33,6 +33,9 @@
             ]
         }
     },
+    "persist": [
+        "NetPnc.ini"
+    ],
     "pre_install": [
         "$AppPath = (Get-ChildItem -Path $original_dir -Recurse -Include '*.exe')[0].Directory",
         "Copy-Item -Path $(Join-Path $AppPath '*') -Destination $original_dir -Recurse -Force",
