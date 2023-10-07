@@ -13,7 +13,7 @@
             "shortcuts": [
                 [
                     "VhdManager_x64.exe",
-                    "Sordum\\VhdManager"
+                    "Sordum\\Simple VHD Manager"
                 ]
             ]
         },
@@ -21,7 +21,7 @@
             "shortcuts": [
                 [
                     "VhdManager.exe",
-                    "Sordum\\VhdManager"
+                    "Sordum\\Simple VHD Manager"
                 ]
             ]
         }
@@ -33,7 +33,7 @@
     ],
     "checkver": {
         "script": [
-            "$title = 'VHD Manager'",
+            "$title = 'VhdManager'",
             "$page = Invoke-WebRequest -UseBasicParsing -Uri \"https://www.sordum.org/?s=$title\"",
             "$obj = ($page.Links | Where-Object title -Match $title)[0]",
             "$version = ($obj.title -split \"\\s\" -match \"\\d+(\\.\\d+)+\")[0] -Replace 'v', ''",
