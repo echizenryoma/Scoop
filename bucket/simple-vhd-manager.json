@@ -10,6 +10,12 @@
     "hash": "f72655e573c13f3031fd7c23cca52168612de50950d22bb60e5952e912f0d15c",
     "architecture": {
         "64bit": {
+            "bin": [
+                [
+                    "VhdManager_x64.exe",
+                    "VhdManager"
+                ]
+            ],
             "shortcuts": [
                 [
                     "VhdManager_x64.exe",
@@ -18,6 +24,7 @@
             ]
         },
         "32bit": {
+            "bin": "VhdManager.exe",
             "shortcuts": [
                 [
                     "VhdManager.exe",
