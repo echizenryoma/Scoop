@@ -5,7 +5,7 @@
         "identifier": "Freeware",
         "url": "https://www.sordum.org/eula/"
     },
-    "homepage": "https://www.sordum.org",
+    "homepage": "https://www.sordum.org/simple-vhd-manager",
     "url": "https://www.sordum.org/files/download/simple-vhd-manager/VhdManager.zip",
     "hash": "f72655e573c13f3031fd7c23cca52168612de50950d22bb60e5952e912f0d15c",
     "architecture": {
@@ -31,16 +31,7 @@
         "Copy-Item -Path $(Join-Path $AppPath '*') -Destination $original_dir -Recurse -Force",
         "Remove-Item -Path $AppPath -Recurse -Force"
     ],
-    "checkver": {
-        "script": [
-            "$title = 'Simple VHD Manager'",
-            "$page = Invoke-WebRequest -UseBasicParsing -Uri \"https://www.sordum.org/?s=$title\"",
-            "$obj = ($page.Links | Where-Object title -Match $title)[0]",
-            "$version = ($obj.title -split \"\\s\" -match \"\\d+(\\.\\d+)+\")[0] -Replace 'v', ''",
-            "Write-Output $version"
-        ],
-        "regex": "(?<version>.*)"
-    },
+    "checkver": "Simple\\sVHD\\sManager\\sv([\\d.]+)",
     "autoupdate": {
         "url": "https://www.sordum.org/files/download/simple-vhd-manager/VhdManager.zip"
     }
