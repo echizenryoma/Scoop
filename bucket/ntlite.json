@@ -1,0 +1,48 @@
+{
+    "version": "2023.9.9419",
+    "description": "Local control for updating and editing Windows images and deployments.",
+    "license": "Freeware",
+    "homepage": "https://www.ntlite.com",
+    "innosetup": true,
+    "architecture": {
+        "64bit": {
+            "url": "https://downloads.ntlite.com/files/NTLite_setup_x64.exe",
+            "hash": "6892f30f6d300c448f19a713798562187aabc673876b86c9b800012c9b0df50f"
+        },
+        "32bit": {
+            "url": "https://downloads.ntlite.com/files/NTLite_setup_x86.exe",
+            "hash": "bca6c0d8715f850426cc03ba9a80efc2e21cc21d514de27bd84aa39fee1d9b42"
+        }
+    },
+    "shortcuts": [
+        [
+            "NTLite.exe",
+            "NTLite"
+        ]
+    ],
+    "persist": [
+        "settings.xml",
+        "Cache",
+        "Presets",
+        "Updates"
+    ],
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\settings.xml\")) {",
+        "    New-Item -Path \"$dir\\settings.xml\" -ItemType File | Out-Null",
+        "}"
+    ],
+    "checkver": {
+        "url": "https://www.ntlite.com/download/",
+        "regex": "v(?<version>(\\d+(\\.\\d+)+))"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://downloads.ntlite.com/files/NTLite_setup_x64.exe"
+            },
+            "32bit": {
+                "url": "https://downloads.ntlite.com/files/NTLite_setup_x86.exe"
+            }
+        }
+    }
+}
