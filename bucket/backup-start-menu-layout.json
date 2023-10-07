@@ -8,7 +8,6 @@
     },
     "url": "https://www.sordum.org/files/download/backup-start-menu-layout/BackupSML.zip",
     "hash": "cf79fe0e05003687427845b502e29b80e57fb2fd0af350d90d047f5432b51997",
-    "extract_dir": "BackupSML",
     "architecture": {
         "32bit": {
             "bin": "BackupSML.exe",
@@ -34,6 +33,11 @@
             ]
         }
     },
+    "pre_install": [
+        "$AppPath = (Get-ChildItem -Path $original_dir -Recurse -Include '*.exe')[0].Directory",
+        "Copy-Item -Path $(Join-Path $AppPath '*') -Destination $original_dir -Recurse -Force",
+        "Remove-Item -Path $AppPath -Recurse -Force"
+    ],
     "persist": [
         "BackupSML.ini",
         "MenuLayouts"
