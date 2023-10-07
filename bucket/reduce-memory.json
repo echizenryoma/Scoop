@@ -1,0 +1,46 @@
+{
+    "version": "1.6",
+    "homepage": "https://www.sordum.org/reduce-memory/",
+    "description": "A small tool for freeing up RAM memory.",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.sordum.org/eula/"
+    },
+    "url": "https://www.sordum.org/files/download/reduce-memory/ReduceMemory.zip",
+    "hash": "8381123114d1817365b08fa86a808a794f5ef472720aa49a055217b6e0c8b0e7",
+    "architecture": {
+        "64bit": {
+            "bin": [
+                [
+                    "ReduceMemory_x64.exe",
+                    "ReduceMemory"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "ReduceMemory_x64.exe",
+                    "Sordum\\Reduce Memory"
+                ]
+            ]
+        },
+        "32bit": {
+            "bin": "ReduceMemory.exe",
+            "shortcuts": [
+                [
+                    "ReduceMemory.exe",
+                    "Sordum\\Reduce Memory"
+                ]
+            ]
+        }
+    },
+    "persist": "ReduceMemory.ini",
+    "pre_install": [
+        "$AppPath = (Get-ChildItem -Path $original_dir -Recurse -Include '*.exe')[0].Directory",
+        "Copy-Item -Path $(Join-Path $AppPath '*') -Destination $original_dir -Recurse -Force",
+        "Remove-Item -Path $AppPath -Recurse -Force"
+    ],
+    "checkver": "Reduce\\sMemory\\sv([\\d.]+)",
+    "autoupdate": {
+        "url": "https://www.sordum.org/files/download/reduce-memory/ReduceMemory.zip"
+    }
+}
