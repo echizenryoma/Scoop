@@ -16,8 +16,6 @@
         "jsonpath": "$[0].tag_name"
     },
     "autoupdate": {
-        "architecture": {
-            "url": "https://github.com/subhra74/xdm/releases/download/$version/xdmsetup-$version.msi"
-        }
+        "url": "https://github.com/subhra74/xdm/releases/download/$version/xdmsetup-$version.msi"
     }
 }
