@@ -1,12 +1,12 @@
 {
-    "version": "2.8.0",
+    "version": "2.9.0",
     "description": "Modern and Delightful HTTP Debugging Proxy for Windows",
     "license": "Freeware",
     "homepage": "https://proxyman.io/windows",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ProxymanApp/proxyman-windows-linux/releases/download/2.8.0/Proxyman.Setup.2.8.0.exe#/dl.7z",
-            "hash": "4f282a86175f31db1b22adff049d30bb75812c39b254f31728014d5beff16702",
+            "url": "https://github.com/ProxymanApp/proxyman-windows-linux/releases/download/2.9.0/Proxyman.Setup.2.9.0.exe#/dl.7z",
+            "hash": "eea29dbea1c5f51a8ea25e238a8d95e9e6841e427704328bf4b2073488977f9f",
             "shortcuts": [
                 [
                     "Proxyman.exe",
