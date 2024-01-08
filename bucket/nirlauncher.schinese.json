@@ -1,10 +1,10 @@
 {
-    "version": "1.30.8",
+    "version": "1.30.9",
     "description": "Most of NirSoft utilities are translated to other languages by volunteers from around the world. In the following section, you can download all translations of the desired language in one zip file, and extract them into NirSoft folder with all other utilities. After you do that, you'll be able to use the utilities of NirSoft in your preferred language, as long as there is a translation file for the utility that you use.",
     "homepage": "https://launcher.nirsoft.net/",
     "license": "Freeware",
     "url": "https://download.nirsoft.net/nirsoft_package_schinese.zip",
-    "hash": "c54fcb1b7eb4f850093b19ae556f9a6321067b281e1ee01a4c693dc27e834e4a",
+    "hash": "9658fb2afc1f6146f491dede3ac15fb0e3fbed20d8f2a4b7832ac9219a34be1c",
     "depends": "nirlauncher",
     "post_install": [
         "Copy-Item -Path \"$dir\\*_lng.ini\" -Destination \"$(appdir nirlauncher $global)\\current\\NirSoft\"",
