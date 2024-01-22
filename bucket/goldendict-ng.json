@@ -1,12 +1,12 @@
 {
-    "version": "v23.12.07-HeavySnow.b0086d5c",
+    "version": "v24.01.22-LoongYear.3dddb3be",
     "description": "A feature-rich dictionary lookup program, supporting multiple dictionary formats (StarDict/Babylon/Lingvo/Dictd/AARD/MDict/SDict) and online dictionaries, featuring perfect article rendering with the complete markup, illustrations and other content retained, and allowing you to type in words without any accents or correct case.",
     "license": "GPL-3.0-or-later",
     "homepage": "https://github.com/xiaoyifang/goldendict",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/xiaoyifang/goldendict-ng/releases/download/v23.12.07-HeavySnow.b0086d5c/6.6.1-GoldenDict.exe_windows-2019_20231208.zip",
-            "hash": "2b78a93ef05dfd6f104b9e0fea4a2df97852f1033efb9d72665639f3b13b6c29",
+            "url": "https://github.com/xiaoyifang/goldendict-ng/releases/download/v24.01.22-LoongYear.3dddb3be/6.6.1-GoldenDict.exe_windows-2019_20240122.zip",
+            "hash": "f586bbdbd922795ea857550737e1101c0579bf2b6195279f0a703582aeef784b",
             "shortcuts": [
                 [
                     "GoldenDict.exe",
