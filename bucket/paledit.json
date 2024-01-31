@@ -1,0 +1,20 @@
+{
+    "version": "0.4.8",
+    "description": "A simple tool for Editing and Generating Pals within PalWorld Saves",
+    "license": "MIT",
+    "homepage": "https://github.com/EternalWraith/PalEdit",
+    "url": "https://github.com/EternalWraith/PalEdit/releases/download/v0.4.8/PalEdit.v0.4.8.zip",
+    "hash": "fb89ba5ffa93064ffaf13316b3ead7be924fae959afa15c75c2d21fe969f40cb",
+    "shortcuts": [
+        [
+            "PalEdit.exe",
+            "PalEdit"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/EternalWraith/PalEdit"
+    },
+    "autoupdate": {
+        "url": "https://github.com/EternalWraith/PalEdit/releases/download/v$version/PalEdit.v$version.zip"
+    }
+}
