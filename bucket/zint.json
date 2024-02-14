@@ -1,0 +1,24 @@
+{
+    "version": "2.13.0",
+    "description": "Zint is a suite of programs to allow easy encoding of data in any of the wide range of public domain barcode standards and to allow integration of this capability into your own programs.",
+    "homepage": "https://sourceforge.net/projects/zint/",
+    "license": "GPL-3.0-or-later",
+    "url": "https://sourceforge.net/projects/zint/files/zint/2.13.0/zint-2.13.0-win32.zip",
+    "hash": "sha1:04c2447c04abbb32339a2b2da52a01611de70980",
+    "bin": "zint.exe",
+    "extract_dir": "zint-2.13.0",
+    "shortcuts": [
+        [
+            "qtZint.exe",
+            "Zint Barcode Generator"
+        ]
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/zint/files/zint/",
+        "regex": "<tr title=\"([\\d.]+)"
+    },
+    "autoupdate": {
+        "extract_dir": "zint-$version",
+        "url": "https://sourceforge.net/projects/zint/files/zint/$version/zint-$version-win32.zip"
+    }
+}
