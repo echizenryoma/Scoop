@@ -2,7 +2,7 @@
     "version": "0.4.1",
     "description": "DISMTools is a front-end for DISM that lets you manage your Windows Imaging (WIM) files and a whole lot more.",
     "license": "GPL-3.0-only",
-    "homepage": "https://github.com/HMBSbige/NatTypeTester",
+    "homepage": "https://github.com/CodingWonders/DISMTools",
     "url": "https://github.com/CodingWonders/DISMTools/releases/download/v0.4.1_stable/DISMTools.zip",
     "hash": "cc536156b35cc8a944e0041987df6d1691ccdc7f047b9ff4694eb9b4c2b5d999",
     "shortcuts": [
