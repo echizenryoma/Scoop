@@ -30,9 +30,9 @@
         }
     },
     "bin": [
-        "UEFIFind",
-        "UEFIExtract",
-        "UEFITool"
+        "UEFIFind.exe",
+        "UEFIExtract.exe",
+        "UEFITool.exe"
     ],
     "shortcuts": [
         [
