@@ -1,0 +1,65 @@
+{
+    "version": "A68",
+    "description": "UEFITool is a viewer and editor of firmware images conforming to UEFI Platform Interface (PI) Specifications.",
+    "license": "BSD-3-Clause",
+    "homepage": "https://github.com/LongSoft/UEFITool",
+    "architecture": {
+        "32bit": {
+            "url": [
+                "https://github.com/LongSoft/UEFITool/releases/download/A68/UEFIFind_NE_A68_win32.zip",
+                "https://github.com/LongSoft/UEFITool/releases/download/A68/UEFIExtract_NE_A68_win32.zip",
+                "https://github.com/LongSoft/UEFITool/releases/download/A68/UEFITool_NE_A68_win32.zip"
+            ],
+            "hash": [
+                "37a83e343ca6214d6a5171ccf7c5889e71caa40c93cd3c9ec0eb3a045717e26c",
+                "5eb67043442c20648b54c1eb68bcdafff11640cfcf5ffdaf10d344450822dd25",
+                "e949ddf68294f794327afe4a187a81e32b8363ebcbe85a5bd54c64ed5a313039"
+            ]
+        },
+        "64bit": {
+            "url": [
+                "https://github.com/LongSoft/UEFITool/releases/download/A68/UEFIFind_NE_A68_win64.zip",
+                "https://github.com/LongSoft/UEFITool/releases/download/A68/UEFIExtract_NE_A68_win64.zip",
+                "https://github.com/LongSoft/UEFITool/releases/download/A68/UEFITool_NE_A68_win64.zip"
+            ],
+            "hash": [
+                "437edd63683ffec9e3298c58d93a930c9f68edb6d5b5de723de42b49bd514ced",
+                "e5246736373fc0ae4bfe3e7441967bd050ee68281e45e9ba5022595e07a65775",
+                "40a7dc4238523ae22d92e61ec9e254b3458a44fd4faeb8046c47ec66197fff45"
+            ]
+        }
+    },
+    "bin": [
+        "UEFIFind",
+        "UEFIExtract",
+        "UEFITool"
+    ],
+    "shortcuts": [
+        [
+            "UEFITool.exe",
+            "UEFITool"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/LongSoft/UEFITool/releases",
+        "jsonpath": "$[0].tag_name"
+    },
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": [
+                    "https://github.com/LongSoft/UEFITool/releases/download/$version/UEFIFind_NE_$version_win32.zip",
+                    "https://github.com/LongSoft/UEFITool/releases/download/$version/UEFIExtract_NE_$version_win32.zip",
+                    "https://github.com/LongSoft/UEFITool/releases/download/$version/UEFITool_NE_$version_win32.zip"
+                ]
+            },
+            "64bit": {
+                "url": [
+                    "https://github.com/LongSoft/UEFITool/releases/download/$version/UEFIFind_NE_$version_win64.zip",
+                    "https://github.com/LongSoft/UEFITool/releases/download/$version/UEFIExtract_NE_$version_win64.zip",
+                    "https://github.com/LongSoft/UEFITool/releases/download/$version/UEFITool_NE_$version_win64.zip"
+                ]
+            }
+        }
+    }
+}
