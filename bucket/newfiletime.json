@@ -1,5 +1,5 @@
 {
-    "version": "7.15",
+    "version": "7.16",
     "description": "NewFileTime is a Windows tool that provides you easy access to correct or manipulate any of the timestamps for any file and folder on your Windows system.",
     "license": {
         "identifier": "Freeware",
@@ -13,8 +13,8 @@
                 "https://www.softwareok.com/Download/NewFileTime_Unicode.zip"
             ],
             "hash": [
-                "ac9a9c5aba737336b80099bace6640ff6af73f8234615caef8be47bc7da0ae57",
-                "b761731856dd4d8002f45590c02c612c0c524097c2bbfe66c1835decc77c7954"
+                "dc90d88e4189d073b8cb05e76d899f11d41f636e1137821e333dcac392d0b835",
+                "0e7f0f66ca43a7a83478468aaa4ff17206c15820b4234aa5ae68fe6a4aa8dfd2"
             ],
             "shortcuts": [
                 [
@@ -33,8 +33,8 @@
                 "https://www.softwareok.com/Download/NewFileTime_Unicode.zip"
             ],
             "hash": [
-                "5c78d3730fdb24183c48a11e974f9ed77adf77e1aa6ffd5fec261087392ce645",
-                "b761731856dd4d8002f45590c02c612c0c524097c2bbfe66c1835decc77c7954"
+                "1518dd3c7d39bdd75e551c373484966f520c20d8f5befd5469f070af9eebfb83",
+                "0e7f0f66ca43a7a83478468aaa4ff17206c15820b4234aa5ae68fe6a4aa8dfd2"
             ],
             "shortcuts": [
                 [
