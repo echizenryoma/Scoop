@@ -1,0 +1,46 @@
+{
+    "version": "2.1.2",
+    "description": "GpgFrontend is a free, open-source, robust yet user-friendly, compact and cross-platform tool for OpenPGP encryption.",
+    "homepage": "https://gpgfrontend.bktus.com",
+    "license": "GPL-3.0-or-later",
+    "depends": "gpg",
+    "extract_dir": "GppgFrontend",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/saturneric/GpgFrontend/releases/download/v2.1.2/GpgFrontend-2.1.2-qt6-windows-x86_64-portable.zip",
+            "hash": "5eb759ea315af226c8f618806dafebd8910425dbb0551308405c527840c367e9"
+        }
+    },
+    "shortcuts": [
+        [
+            "Program\\bin\\GpgFrontend.exe",
+            "GpgFrontend"
+        ]
+    ],
+    "pre_install": [
+        "$ConfigIni = \"$dir\\Program\\bin\\config.ini\"",
+        "if (!(Test-Path \"$ConfigIni\")) {",
+        "  New-Item -Type File \"$ConfigIni\"",
+        "}"
+    ],
+    "post_install": [
+        "Remove-Item \"$dir\\GnuPG\" -Force -Recurse",
+        "New-Item -Type Junction -Target \"$dir\\..\\..\\gpg\\current\" -Path \"$dir\\GnuPG\""
+    ],
+    "persist": [
+        "Program\\bin\\data_objs",
+        "Program\\bin\\logs",
+        "Program\\bin\\secure",
+        "Program\\bin\\config.ini"
+    ],
+    "checkver": {
+        "github": "https://github.com/saturneric/GpgFrontend"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/saturneric/GpgFrontend/releases/download/v$version/GpgFrontend-$version-qt6-windows-x86_64-portable.zip"
+            }
+        }
+    }
+}
