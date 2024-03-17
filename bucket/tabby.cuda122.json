@@ -1,0 +1,28 @@
+{
+    "version": "0.9.0",
+    "description": "Tabby is a self-hosted AI coding assistant",
+    "license": "Apache-2.0",
+    "homepage": "https://github.com/TabbyML/tabby",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/TabbyML/tabby/releases/download/v0.9.0/tabby_x86_64-windows-msvc-cuda122.exe",
+            "hash": "a7ef7e75e3215c69120faf8c23886bbf8d68061e3a12c0405ec89f3135cc46f6",
+            "bin": [
+                [
+                    "tabby_x86_64-windows-msvc-cuda122.exe",
+                    "tabby_cuda122"
+                ]
+            ]
+        }
+    },
+    "checkver": {
+        "github": "https://github.com/TabbyML/tabby"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/TabbyML/tabby/releases/download/v$version/tabby_x86_64-windows-msvc-cuda122.exe"
+            }
+        }
+    }
+}
