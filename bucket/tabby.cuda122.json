@@ -15,6 +15,9 @@
             ]
         }
     },
+    "suggest": {
+        "cuda": "main/cuda"
+    },
     "checkver": {
         "github": "https://github.com/TabbyML/tabby"
     },
