@@ -1,0 +1,33 @@
+{
+    "version": "2.2.10.3449",
+    "description": "Download files to your private cloud and stream anywhere",
+    "license": {
+        "identifier": "Shareware",
+        "url": "https://mypikpak.com/en-US/policy/copyright-Infringement"
+    },
+    "homepage": "https://mypikpak.com/en-US",
+    "url": "https://api-drive.mypikpak.com/package/v1/download/official_PikPak.exe?pf=windows&tf=official#/dl.7z",
+    "hash": "db55b8a05f00373473939be16eea6c9f4ee400373a5f8a3887c3be8ffcf82da2",
+    "shortcuts": [
+        [
+            "PikPak.exe",
+            "PikPak"
+        ]
+    ],
+    "extract_to": "tmp",
+    "pre_install": "Expand-7zipArchive \"$dir\\tmp\\`$PLUGINSDIR\\app-32.7z\" \"$dir\"",
+    "post_install": "Remove-Item \"$dir\\tmp\" -Force -Recurse",
+    "checkver": {
+        "script": [
+            "$req_body = '{\"client\":\"windows\",\"data\":{\"channel\":\"default\",\"versionName\":\"2.0\"}}'",
+            "$resp = Invoke-WebRequest -Uri 'https://config.mypikpak.com/config/v1/client_version' -Method Post -Body $req_body",
+            "$resp_json = $resp.Content | ConvertFrom-Json",
+            "$version = $resp_json.values.client_version.newVersionName",
+            "Write-Output $version"
+        ],
+        "regex": "(?<version>[\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://api-drive.mypikpak.com/package/v1/download/official_PikPak.exe?pf=windows&tf=official#/dl.7z"
+    }
+}
