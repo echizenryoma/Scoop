@@ -1,10 +1,10 @@
 {
-    "version": "2024.03.02",
+    "version": "2024.04.29",
     "description": "pyinstxtractor-ng is a tool to extract the contents of a Pyinstaller generated executable file.",
     "license": "GPL-3.0-or-later",
     "homepage": "https://github.com/pyinstxtractor/pyinstxtractor-ng",
-    "url": "https://github.com/pyinstxtractor/pyinstxtractor-ng/releases/download/2024.03.02/pyinstxtractor-ng.exe",
-    "hash": "6343c6a6b48e4962cae4b5296d629e8aacf35c44056812e412e5dd32956641d1",
+    "url": "https://github.com/pyinstxtractor/pyinstxtractor-ng/releases/download/2024.04.29/pyinstxtractor-ng.exe",
+    "hash": "a26578f5ac26f99e52d0be64d45ebf083c5f7fbcd1153e3557fc9032c2b90e41",
     "bin": "pyinstxtractor-ng.exe",
     "checkver": {
         "github": "https://github.com/pyinstxtractor/pyinstxtractor-ng"
