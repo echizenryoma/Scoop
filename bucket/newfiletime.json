@@ -20,6 +20,10 @@
                 [
                     "NewFileTime.exe",
                     "NewFileTime"
+                ],
+                [
+                    "NewFileTime_uc.exe",
+                    "NewFileTime (Unicode)"
                 ]
             ],
             "bin": [
@@ -40,6 +44,10 @@
                 [
                     "NewFileTime_x64.exe",
                     "NewFileTime"
+                ],
+                [
+                    "NewFileTime_uc.exe",
+                    "NewFileTime (Unicode)"
                 ]
             ],
             "bin": [
