@@ -19,14 +19,8 @@
             "bin": "IsMyLcdOK.exe"
         },
         "64bit": {
-            "url": [
-                "https://www.softwareok.com/Download/IsMyLcdOK_x64.zip",
-                "https://www.softwareok.com/Download/NewFileTime_Unicode.zip"
-            ],
-            "hash": [
-                "8983cead3d9f00c3e34ad71387c5449d691ba10c89ed714db14379c9aad1da6e",
-                "cf465de78cabbc8d3fe0f8047cc7b19d0335e49da66566127392ea58cee7b325"
-            ],
+            "url": "https://www.softwareok.com/Download/IsMyLcdOK_x64.zip",
+            "hash": "8983cead3d9f00c3e34ad71387c5449d691ba10c89ed714db14379c9aad1da6e",
             "shortcuts": [
                 [
                     "IsMyLcdOK_x64.exe",
