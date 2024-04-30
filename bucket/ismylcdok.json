@@ -1,0 +1,58 @@
+{
+    "version": "5.57",
+    "description": "IsMyLcdOK is a small program but effective solution to easily check for dead/paralysed/stuck pixels on LCD monitors.",
+    "license": {
+        "identifier": "Freeware",
+        "url": "http://www.softwareok.com/?seite=Microsoft/IsMyLcdOK/Eula"
+    },
+    "homepage": "http://www.softwareok.com/?seite=Microsoft/IsMyLcdOK",
+    "architecture": {
+        "32bit": {
+            "url": "https://www.softwareok.com/Download/IsMyLcdOK.zip",
+            "hash": "768cd1f20d1bf50d0ca0550093fcc2647f5f66c596e1b6af56593fb2f1b96d04",
+            "shortcuts": [
+                [
+                    "IsMyLcdOK.exe",
+                    "IsMyLcdOK"
+                ]
+            ],
+            "bin": "IsMyLcdOK.exe"
+        },
+        "64bit": {
+            "url": [
+                "https://www.softwareok.com/Download/IsMyLcdOK_x64.zip",
+                "https://www.softwareok.com/Download/NewFileTime_Unicode.zip"
+            ],
+            "hash": [
+                "8983cead3d9f00c3e34ad71387c5449d691ba10c89ed714db14379c9aad1da6e",
+                "cf465de78cabbc8d3fe0f8047cc7b19d0335e49da66566127392ea58cee7b325"
+            ],
+            "shortcuts": [
+                [
+                    "IsMyLcdOK_x64.exe",
+                    "IsMyLcdOK"
+                ]
+            ],
+            "bin": [
+                [
+                    "IsMyLcdOK_x64.exe",
+                    "IsMyLcdOK"
+                ]
+            ]
+        }
+    },
+    "checkver": {
+        "url": "http://www.softwareok.com/?Download=IsMyLcdOK",
+        "regex": "Download IsMyLcdOK (?<version>(\\d+(\\.\\d+)+)) for Microsoft Windows OS"
+    },
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://www.softwareok.com/Download/IsMyLcdOK.zip"
+            },
+            "64bit": {
+                "url": "https://www.softwareok.com/Download/IsMyLcdOK_x64.zip"
+            }
+        }
+    }
+}
