@@ -1,12 +1,12 @@
 {
-    "version": "v24.01.22-LoongYear.3dddb3be",
+    "version": "v24.05.05-LiXia.ecd1138c",
     "description": "A feature-rich dictionary lookup program, supporting multiple dictionary formats (StarDict/Babylon/Lingvo/Dictd/AARD/MDict/SDict) and online dictionaries, featuring perfect article rendering with the complete markup, illustrations and other content retained, and allowing you to type in words without any accents or correct case.",
     "license": "GPL-3.0-or-later",
     "homepage": "https://github.com/xiaoyifang/goldendict",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/xiaoyifang/goldendict-ng/releases/download/v24.01.22-LoongYear.3dddb3be/6.6.1-GoldenDict.exe_windows-2019_20240122.zip",
-            "hash": "f586bbdbd922795ea857550737e1101c0579bf2b6195279f0a703582aeef784b",
+            "url": "https://github.com/xiaoyifang/goldendict-ng/releases/download/v24.05.05-LiXia.ecd1138c/6.7.0-GoldenDict.exe_windows-2019_20240505.zip",
+            "hash": "f1ed445cd393808f5b2ded8b8ac44aadadedae768e8075fb5bb7ccb18a3e2ee8",
             "shortcuts": [
                 [
                     "GoldenDict.exe",
