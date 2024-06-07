@@ -1,0 +1,42 @@
+{
+    "version": "2024.05.19.0702",
+    "description": "As a system's built-in browser, Edge is complex and often redundant. Moreover, Microsoft frequently \"recommends\" unwanted features through pop-ups and notifications.",
+    "license": "GPL-3.0-only",
+    "homepage": "https://github.com/NXY666/EdgePolicyManager",
+    "architecture": {
+        "32bit": {
+            "url": "https://github.com/NXY666/EdgePolicyManager/releases/download/v2024.05.19.0702/EdgePolicyManager-v2024.05.19.0702-x86.7z",
+            "hash": "74a179137a5ac12bba19874e1feb5094333d9c3f9ea3a6c85c2982142ee1a248"
+        },
+        "64bit": {
+            "url": "https://github.com/NXY666/EdgePolicyManager/releases/download/v2024.05.19.0702/EdgePolicyManager-v2024.05.19.0702-x64.7z",
+            "hash": "c062b96bed800a25671e43c5bc36981501ce19cc27439553f0e3b40cfdb11f94"
+        },
+        "arm64": {
+            "url": "https://github.com/NXY666/EdgePolicyManager/releases/download/v2024.05.19.0702/EdgePolicyManager-v2024.05.19.0702-arm64.7z",
+            "hash": "5a95ae5e80247cd1fe9e21e833d1d6fd0b519e9c1a83e85d06928a45ff5a8eea"
+        }
+    },
+    "shortcuts": [
+        [
+            "EdgePolicyManager.exe",
+            "EdgePolicyManager"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/NXY666/EdgePolicyManager"
+    },
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://github.com/NXY666/EdgePolicyManager/releases/download/v$version/EdgePolicyManager-v$version-x86.7z"
+            },
+            "64bit": {
+                "url": "https://github.com/NXY666/EdgePolicyManager/releases/download/v$version/EdgePolicyManager-v$version-x64.7z"
+            },
+            "arm64": {
+                "url": "https://github.com/NXY666/EdgePolicyManager/releases/download/v$version/EdgePolicyManager-v$version-arm64.7z"
+            }
+        }
+    }
+}
