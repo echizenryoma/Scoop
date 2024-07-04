@@ -1,0 +1,36 @@
+{
+    "version": "3.2.0.810",
+    "description": "VSFilter",
+    "license": "GPL-2.0-only",
+    "homepage": "https://github.com/pinterf/xy-VSFilter",
+    "url": "https://github.com/pinterf/xy-VSFilter/releases/download/3.2.0.810/xyVSFilterSubFilter-pfmod-3.2.0.810.7z",
+    "hash": "742202308b27e94b016877fe4f4637ab810d5319b2e633bce950b2ed53113ebd",
+    "architecture": {
+        "32bit": {
+            "post_install": [
+                "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+                "& regsvr32.exe /s \"$dir\\x86\\XySubFilter.dll\""
+            ],
+            "pre_uninstall": [
+                "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+                "& regsvr32.exe /s /u \"$dir\\x86\\XySubFilter.dll\""
+            ]
+        },
+        "64bit": {
+            "post_install": [
+                "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+                "& regsvr32.exe /s \"$dir\\x64\\XySubFilter.dll\""
+            ],
+            "pre_uninstall": [
+                "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+                "& regsvr32.exe /s /u \"$dir\\x64\\XySubFilter.dll\""
+            ]
+        }
+    },
+    "checkver": {
+        "github": "https://github.com/pinterf/xy-VSFilter"
+    },
+    "autoupdate": {
+        "url": "https://github.com/pinterf/xy-VSFilter/releases/download/$version/xyVSFilterSubFilter-pfmod-$version.7z"
+    }
+}
