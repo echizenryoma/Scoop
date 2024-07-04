@@ -9,21 +9,25 @@
         "32bit": {
             "post_install": [
                 "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
-                "Start-Process \"$dir\\x86\\Install_XySubFilter.bat\" -Wait -Verb 'RunAs' -WindowStyle 'Hidden'; Start-Sleep -Seconds 3"
+                "& regsvr32.exe /s \"$dir\\x86\\VSFilter.dll\"",
+                "& regsvr32.exe /s \"$dir\\x86\\XySubFilter.dll\""
             ],
             "pre_uninstall": [
                 "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
-                "Start-Process \"$dir\\x86\\Uninstall_XySubFilter.bat\" -Wait -Verb 'RunAs' -WindowStyle 'Hidden'; Start-Sleep -Seconds 3"
+                "& regsvr32.exe /s /u \"$dir\\x86\\VSFilter.dll\"",
+                "& regsvr32.exe /s /u \"$dir\\x86\\XySubFilter.dll\""
             ]
         },
         "64bit": {
             "post_install": [
                 "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
-                "Start-Process \"$dir\\x64\\Install_XySubFilter.bat\" -Wait -Verb 'RunAs' -WindowStyle 'Hidden'; Start-Sleep -Seconds 3"
+                "& regsvr32.exe /s \"$dir\\x64\\VSFilter.dll\"",
+                "& regsvr32.exe /s \"$dir\\x64\\XySubFilter.dll\""
             ],
             "pre_uninstall": [
                 "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
-                "Start-Process \"$dir\\x64\\Uninstall_XySubFilter.bat\" -Wait -Verb 'RunAs' -WindowStyle 'Hidden'; Start-Sleep -Seconds 3"
+                "& regsvr32.exe /s /u \"$dir\\x64\\VSFilter.dll\"",
+                "& regsvr32.exe /s /u \"$dir\\x64\\XySubFilter.dll\""
             ]
         }
     },
