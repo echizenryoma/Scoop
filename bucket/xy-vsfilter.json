@@ -1,0 +1,36 @@
+{
+    "version": "3.2.0.810",
+    "description": "xy-VSFilter",
+    "license": "GPL-2.0-only",
+    "homepage": "https://github.com/pinterf/xy-VSFilter",
+    "url": "https://github.com/pinterf/xy-VSFilter/releases/download/3.2.0.810/xyVSFilterSubFilter-pfmod-3.2.0.810.7z",
+    "hash": "742202308b27e94b016877fe4f4637ab810d5319b2e633bce950b2ed53113ebd",
+    "architecture": {
+        "32bit": {
+            "post_install": [
+                "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+                "Start-Process \"$dir\\x86\\Install_XySubFilter.bat\" -Wait -Verb 'RunAs' -WindowStyle 'Hidden'; Start-Sleep -Seconds 3"
+            ],
+            "pre_uninstall": [
+                "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+                "Start-Process \"$dir\\x86\\Uninstall_XySubFilter.bat\" -Wait -Verb 'RunAs' -WindowStyle 'Hidden'; Start-Sleep -Seconds 3"
+            ]
+        },
+        "64bit": {
+            "post_install": [
+                "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+                "Start-Process \"$dir\\x64\\Install_XySubFilter.bat\" -Wait -Verb 'RunAs' -WindowStyle 'Hidden'; Start-Sleep -Seconds 3"
+            ],
+            "pre_uninstall": [
+                "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+                "Start-Process \"$dir\\x64\\Uninstall_XySubFilter.bat\" -Wait -Verb 'RunAs' -WindowStyle 'Hidden'; Start-Sleep -Seconds 3"
+            ]
+        }
+    },
+    "checkver": {
+        "github": "https://github.com/pinterf/xy-VSFilter"
+    },
+    "autoupdate": {
+        "url": "https://github.com/pinterf/xy-VSFilter/releases/download/$version/xyVSFilterSubFilter-pfmod-$version.7z"
+    }
+}
