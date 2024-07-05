@@ -1,0 +1,37 @@
+{
+    "version": "r5.2.6",
+    "description": "VSFilterMod in MPC-BE",
+    "license": "GPL-3.0-only",
+    "homepage": "https://github.com/sorayuki/VSFilterMod",
+    "url": "https://github.com/sorayuki/VSFilterMod/releases/download/r5.2.6/VSFilterMod_bin.zip",
+    "hash": "a256dcac5d776d8ab3a592f7ccae7d9151feafb203196fea7836f71b00b48ddd",
+    "architecture": {
+        "32bit": {
+            "post_install": [
+                "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+                "& regsvr32.exe /s \"$dir\\x86\\VSFilterMod.dll\""
+            ],
+            "pre_uninstall": [
+                "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+                "& regsvr32.exe /s /u \"$dir\\x86\\VSFilterMod.dll\""
+            ]
+        },
+        "64bit": {
+            "post_install": [
+                "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+                "& regsvr32.exe /s \"$dir\\x64\\VSFilterMod.dll\""
+            ],
+            "pre_uninstall": [
+                "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+                "& regsvr32.exe /s /u \"$dir\\x64\\VSFilterMod.dll\""
+            ]
+        }
+    },
+    "checkver": {
+        "url": "https://api.github.com/repos/sorayuki/VSFilterMod/releases/latest",
+        "jsonpath": "$.tag_name"
+    },
+    "autoupdate": {
+        "url": "https://github.com/sorayuki/VSFilterMod/releases/download/$version/VSFilterMod_bin.zip"
+    }
+}
