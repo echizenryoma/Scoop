@@ -1,0 +1,26 @@
+{
+    "version": "1.5.0",
+    "description": "Translate subtitle using ChatGPT",
+    "license": "GPL-3.0-only",
+    "homepage": "https://github.com/gnehs/subtitle-translator-electron",
+    "url": "https://github.com/gnehs/subtitle-translator-electron/releases/download/1.5.0/subtitle-translator_1.5.0.exe#/dl.7z",
+    "hash": "59d65ea7e0185f16b910d9340d286e553ffef4e21bd73b82df36006c362c2883",
+    "extract_to": "tmp",
+    "pre_install": [
+        "$file = (Get-ChildItem -File -Filter 'app-64.7z' -Path \"$original_dir\" -Recurse)[0].FullName",
+        "Expand-7ZipArchive $file \"$original_dir\"",
+        "Remove-Item -Force -Recurse -Path \"$original_dir/tmp\""
+    ],
+    "shortcuts": [
+        [
+            "Subtitle Translator.exe",
+            "Subtitle Translator"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/gnehs/subtitle-translator-electron"
+    },
+    "autoupdate": {
+        "url": "https://github.com/gnehs/subtitle-translator-electron/releases/download/$version/subtitle-translator_$version.exe#/dl.7z"
+    }
+}
