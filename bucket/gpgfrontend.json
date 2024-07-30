@@ -1,5 +1,5 @@
 {
-    "version": "2.1.3",
+    "version": "2.1.4",
     "description": "GpgFrontend is a free, open-source, robust yet user-friendly, compact and cross-platform tool for OpenPGP encryption.",
     "homepage": "https://gpgfrontend.bktus.com",
     "license": "GPL-3.0-or-later",
@@ -7,8 +7,8 @@
     "extract_dir": "GppgFrontend",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/saturneric/GpgFrontend/releases/download/v2.1.3/GpgFrontend-2.1.3-qt6-windows-x86_64-portable.zip",
-            "hash": "7911ba0d2a35bbc1dc9370a19fd529c377d504287a14f940b4f765e60a056755"
+            "url": "https://github.com/saturneric/GpgFrontend/releases/download/v2.1.4/GpgFrontend-2.1.4-qt6-windows-x86_64-portable.zip",
+            "hash": "eb961eff7e868c18d69f5ba2ac1bc8d303e3440d69246bc7d897e0bb8d42460c"
         }
     },
     "shortcuts": [
