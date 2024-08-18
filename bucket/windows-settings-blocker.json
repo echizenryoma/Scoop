@@ -1,0 +1,39 @@
+{
+    "version": "1.2",
+    "homepage": "https://www.sordum.org/windows-settings-blocker",
+    "description": "To stop users from changing settings in Windows 11 and 10.",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.sordum.org/eula/"
+    },
+    "url": "https://www.sordum.org/files/download/windows-settings-blocker/WsBlocker.zip",
+    "hash": "91f5d82362edca15a31d69655d6c8b360a695807c65de6aa98285d12ca8f0f47",
+    "pre_install": [
+        "$AppPath = (Get-ChildItem -Path $original_dir -Recurse -Include '*.exe')[0].Directory",
+        "Copy-Item -Path $(Join-Path $AppPath '*') -Destination $original_dir -Recurse -Force",
+        "Remove-Item -Path $AppPath -Recurse -Force"
+    ],
+    "architecture": {
+        "32bit": {
+            "shortcuts": [
+                [
+                    "WsBlocker.exe",
+                    "Sordum\\Windows Settings Blocker"
+                ]
+            ]
+        },
+        "64bit": {
+            "shortcuts": [
+                [
+                    "WsBlocker_x64.exe",
+                    "Sordum\\Windows Settings Blocker"
+                ]
+            ]
+        }
+    },
+    "persist": "WsBlocker.ini",
+    "checkver": "Windows\\sSettings\\sBlocker\\sv([\\d.]+)",
+    "autoupdate": {
+        "url": "https://www.sordum.org/files/download/windows-settings-blocker/WsBlocker.zip"
+    }
+}
