@@ -24,7 +24,7 @@
             "if (!(Get-Command \"autohotkey.exe\" -ErrorAction SilentlyContinue)) { error \"$app requires autohotkey\"; break }",
             "$ahk_script = Join-Path $dir 'npcap.ahk'",
             "$setup_bin = Join-Path $dir 'npcap_setup.exe'",
-            "Start-Process \"autohotkey.exe\" -Wait -Verb 'RunAs' -Args \"'${ahk_script}' install '${setup_bin}'\""
+            "Start-Process \"autohotkey.exe\" -Wait -Verb 'RunAs' -Args \"${ahk_script} install ${setup_bin}\""
         ]
     },
     "uninstaller": {
