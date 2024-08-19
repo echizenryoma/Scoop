@@ -18,18 +18,22 @@
             ]
         }
     },
-    "pre_install": [
-        "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
-        "if (!(Get-Command \"autohotkey.exe\" -ErrorAction SilentlyContinue)) { error \"$app requires autohotkey\"; break }",
-        "$ahk_script = Join-Path $dir 'npcap.ahk'",
-        "$setup_bin = Join-Path $dir 'npcap_setup.exe'",
-        "Start-Process \"autohotkey.exe\" -Wait -Verb 'RunAs' -Args \"'${ahk_script}' install '${setup_bin}'\""
-    ],
-    "pre_uninstall": [
-        "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
-        "Start-Process \"$env:ProgramFiles\\Npcap\\uninstall.exe\" -Wait -Verb 'RunAs' -Args '/S'",
-        "Remove-Item  \"$env:ProgramFiles\\Npcap\" -Recurse -Force"
-    ],
+    "installer": {
+        "script": [
+            "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+            "if (!(Get-Command \"autohotkey.exe\" -ErrorAction SilentlyContinue)) { error \"$app requires autohotkey\"; break }",
+            "$ahk_script = Join-Path $dir 'npcap.ahk'",
+            "$setup_bin = Join-Path $dir 'npcap_setup.exe'",
+            "Start-Process \"autohotkey.exe\" -Wait -Verb 'RunAs' -Args \"'${ahk_script}' install '${setup_bin}'\""
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+            "Start-Process \"$env:ProgramFiles\\Npcap\\uninstall.exe\" -Wait -Verb 'RunAs' -Args '/S'",
+            "Remove-Item  \"$env:ProgramFiles\\Npcap\" -Recurse -Force"
+        ]
+    },
     "suggest": {
         "autohotkey": "extra/autohotkey"
     },
