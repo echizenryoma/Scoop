@@ -18,9 +18,7 @@
     ],
     "persist": "uikey.ini",
     "pre_install": [
-        "if (!(Test-Path \"$persist_dir\\uikey.ini\")) {",
-        "    New-Item -Path \"$dir\\uikey.ini\" -ItemType File | Out-Null",
-        "}"
+        "if (!(Test-Path \"$persist_dir\\uikey.ini\")) { New-Item -Path \"$dir\\uikey.ini\" -ItemType File | Out-Null }"
     ],
     "checkver": {
         "url": "https://www.ezbsystems.com/ultraiso/download.htm",
