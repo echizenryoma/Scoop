@@ -1,4 +1,4 @@
-﻿SendMode "Input"
+SendMode "Input"
 SetWorkingDir A_ScriptDir
 SetTitleMatchMode "RegEx"
 
