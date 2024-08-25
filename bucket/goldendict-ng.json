@@ -28,16 +28,16 @@
         "script": [
             "$resp = Invoke-WebRequest -Uri 'https://api.github.com/repos/xiaoyifang/goldendict/releases/latest'",
             "$json = $resp.Content | ConvertFrom-Json",
-            "$download_url = ($json.assets | Where-Object name -Match '^6.*_windows.*.zip$')[-1].browser_download_url",
+            "$name = ($json.assets.name -Match '.*_windows.*.zip$')[-1]",
             "$version = $json.tag_name",
-            "Write-Output \"$version $download_url\""
+            "Write-Output \"$version $name\""
         ],
-        "regex": "(?<version>.+)\\s(?<url>.+)"
+        "regex": "(?<version>.+)\\s(?<name>.+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "$matchUrl"
+                "url": "https://github.com/xiaoyifang/goldendict-ng/releases/download/$version/$matchName"
             }
         }
     }
