@@ -1,5 +1,5 @@
 {
-    "version": "2.5.4.4801",
+    "version": "2.5.6.4831",
     "description": "Download files to your private cloud and stream anywhere",
     "license": {
         "identifier": "Shareware",
@@ -7,7 +7,7 @@
     },
     "homepage": "https://mypikpak.com/en-US",
     "url": "https://api-drive.mypikpak.com/package/v1/download/official_PikPak.exe?pf=windows&tf=official#/dl.7z",
-    "hash": "dc96a0ead042eacffe8db35cfa2b3906eab925eb8e72cfdd511061c88bed3e99",
+    "hash": "ae68ab2edb68ad1151cd31fcc2f14e2357713915a5bb77f14eff67a0771a3246",
     "shortcuts": [
         [
             "PikPak.exe",
