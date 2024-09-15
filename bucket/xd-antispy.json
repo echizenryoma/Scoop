@@ -1,0 +1,20 @@
+{
+    "version": "4.13.0",
+    "description": "It was and is a relaunch of the legendary little helper, XP-Antispy, which was indispensable under Windows XP.",
+    "license": "MIT",
+    "homepage": "https://github.com/builtbybel/xd-AntiSpy",
+    "url": "https://github.com/builtbybel/xd-AntiSpy/releases/download/4.13.0/xd-AntiSpy.zip",
+    "hash": "8c946c7bd18ef7249eaa4f3ddcf4fcbf9bf321502143ffe99c26901482667807",
+    "shortcuts": [
+        [
+            "xd-AntiSpy.exe",
+            "xd-AntiSpy"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/builtbybel/xd-AntiSpy"
+    },
+    "autoupdate": {
+        "url": "https://github.com/builtbybel/xd-AntiSpy/releases/download/$version/xd-AntiSpy.zip"
+    }
+}
