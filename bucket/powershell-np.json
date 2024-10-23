@@ -1,0 +1,41 @@
+{
+    "homepage": "https://github.com/PowerShell/PowerShell",
+    "description": "PowerShell Core, the cross-platform task automation and configuration management framework/tool.",
+    "version": "7.4.6",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.4.6/PowerShell-7.4.6-win-x64.msi#/setup.msi_",
+            "hash": "ed331a04679b83d4c013705282d1f3f8d8300485eb04c081f36e11eaf1148bd0"
+        },
+        "32bit": {
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.4.6/PowerShell-7.4.6-win-x86.msi#/setup.msi_",
+            "hash": "a3f17465ba4b0838b37b5b6f93d03efebc49b065ce5a93d51f1a9bd364df3e30"
+        }
+    },
+    "installer": {
+        "script": [
+            "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+            "Start-Process msiexec -ArgumentList @('/i', \"`\"$dir\\setup.msi_`\"\", '/qn', '/norestart') -Wait -Verb RunAs | Out-Null"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+            "Start-Process msiexec -ArgumentList @('/x', \"`\"$dir\\setup.msi_`\"\", '/qn', '/norestart') -Wait -Verb RunAs | Out-Null"
+        ]
+    },
+    "checkver": {
+        "github": "https://github.com/PowerShell/PowerShell"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/PowerShell/PowerShell/releases/download/v$version/PowerShell-$version-win-x64.msi"
+            },
+            "32bit": {
+                "url": "https://github.com/PowerShell/PowerShell/releases/download/v$version/PowerShell-$version-win-x86.msi"
+            }
+        }
+    }
+}
