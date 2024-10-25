@@ -1,0 +1,32 @@
+{
+    "version": "2.18.4",
+    "description": "Trade at your fingertips, plus easy-to-use 360-degree analytic tools and an exclusive trading community",
+    "homepage": "https://bitwarden.com",
+    "license": "GPL-3.0-or-later",
+    "url": "https://download.lbkrs.com/longbridge-desktop/prod/longbridge-pro-2.18.4-win-ia32.exe#/dl.7z",
+    "hash": "e562311e2db6e34d5868bd1d9688b6360014c41af6a42ae8caf73fddca26dcea",
+    "shortcuts": [
+        [
+            "Longbridge Pro.exe",
+            "Longbridge Pro"
+        ]
+    ],
+    "extract_to": "tmp",
+    "pre_install": [
+        "$file = (Get-ChildItem -File -Filter 'app-32.7z' -Path \"$original_dir/tmp\" -Recurse)[0].FullName",
+        "Expand-7ZipArchive $file \"$original_dir\"",
+        "Remove-Item -Force -Recurse -Path \"$original_dir/tmp\""
+    ],
+    "checkver": {
+        "script": [
+            "$resp = Invoke-WebRequest -Uri 'https://m.lbkrs.com/api/forward/v2/app/config?platform=web&keys=download'",
+            "$json = $resp.Content | ConvertFrom-Json",
+            "$version = $json.data.config.download.Windows.version.default -split '-' -match '\\d(\\.\\d)+'",
+            "Write-Output \"$version\""
+        ],
+        "regex": "(?<version>.+)"
+    },
+    "autoupdate": {
+        "url": "https://download.lbkrs.com/longbridge-desktop/prod/longbridge-pro-$version-win-ia32.exe#/dl.7z"
+    }
+}
