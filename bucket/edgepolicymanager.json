@@ -1,20 +1,20 @@
 {
-    "version": "2024.05.19.0702",
+    "version": "2024.10.06.1743",
     "description": "As a system's built-in browser, Edge is complex and often redundant. Moreover, Microsoft frequently \"recommends\" unwanted features through pop-ups and notifications.",
     "license": "GPL-3.0-only",
     "homepage": "https://github.com/NXY666/EdgePolicyManager",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/NXY666/EdgePolicyManager/releases/download/v2024.05.19.0702/EdgePolicyManager-v2024.05.19.0702-x86.7z",
-            "hash": "74a179137a5ac12bba19874e1feb5094333d9c3f9ea3a6c85c2982142ee1a248"
+            "url": "https://github.com/NXY666/EdgePolicyManager/releases/download/v2024.10.06.1743/EdgePolicyManager-v2024.10.06.1743-x86.exe#/EdgePolicyManager.exe",
+            "hash": "9d4911def92b23ada9c0053d8ad33eec410bf69f28aff8f79f5a4b32c4ced65a"
         },
         "64bit": {
-            "url": "https://github.com/NXY666/EdgePolicyManager/releases/download/v2024.05.19.0702/EdgePolicyManager-v2024.05.19.0702-x64.7z",
-            "hash": "c062b96bed800a25671e43c5bc36981501ce19cc27439553f0e3b40cfdb11f94"
+            "url": "https://github.com/NXY666/EdgePolicyManager/releases/download/v2024.10.06.1743/EdgePolicyManager-v2024.10.06.1743-x64.exe#/EdgePolicyManager.exe",
+            "hash": "9c42270f39ff6fa985730e98f058392fb0d18b811c0e1d7fd01e624638d954d9"
         },
         "arm64": {
-            "url": "https://github.com/NXY666/EdgePolicyManager/releases/download/v2024.05.19.0702/EdgePolicyManager-v2024.05.19.0702-arm64.7z",
-            "hash": "5a95ae5e80247cd1fe9e21e833d1d6fd0b519e9c1a83e85d06928a45ff5a8eea"
+            "url": "https://github.com/NXY666/EdgePolicyManager/releases/download/v2024.10.06.1743/EdgePolicyManager-v2024.10.06.1743-arm64.exe#/EdgePolicyManager.exe",
+            "hash": "8bc5535149caea484627b7828ad349f957e4bb309ba7378f0adbb533a24fc37a"
         }
     },
     "shortcuts": [
@@ -29,13 +29,13 @@
     "autoupdate": {
         "architecture": {
             "32bit": {
-                "url": "https://github.com/NXY666/EdgePolicyManager/releases/download/v$version/EdgePolicyManager-v$version-x86.7z"
+                "url": "https://github.com/NXY666/EdgePolicyManager/releases/download/v$version/EdgePolicyManager-v$version-x86.exe#/EdgePolicyManager.exe"
             },
             "64bit": {
-                "url": "https://github.com/NXY666/EdgePolicyManager/releases/download/v$version/EdgePolicyManager-v$version-x64.7z"
+                "url": "https://github.com/NXY666/EdgePolicyManager/releases/download/v$version/EdgePolicyManager-v$version-x64.exe#/EdgePolicyManager.exe"
             },
             "arm64": {
-                "url": "https://github.com/NXY666/EdgePolicyManager/releases/download/v$version/EdgePolicyManager-v$version-arm64.7z"
+                "url": "https://github.com/NXY666/EdgePolicyManager/releases/download/v$version/EdgePolicyManager-v$version-arm64.exe#/EdgePolicyManager.exe"
             }
         }
     }
