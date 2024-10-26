@@ -6,7 +6,7 @@
         "url": "https://mypikpak.com/en-US/policy/copyright-Infringement"
     },
     "homepage": "https://mypikpak.com/en-US",
-    "url": "https://api-drive.mypikpak.com/package/v1/download/official_PikPak.exe?pf=windows&tf=official#/dl.7z",
+    "url": "https://api-drive.mypikpak.net/package/v1/download/official_PikPak.exe?pf=windows&tf=official#/dl.7z",
     "hash": "25205191847432907331b315d53f8c59bf3337c3b40fbcf3cd2e47327027ff18",
     "shortcuts": [
         [
@@ -20,7 +20,7 @@
     "checkver": {
         "script": [
             "$req_body = '{\"client\":\"windows\",\"data\":{\"channel\":\"default\",\"versionName\":\"2.0\"}}'",
-            "$resp = Invoke-WebRequest -Uri 'https://config.mypikpak.com/config/v1/client_version' -Method Post -Body $req_body",
+            "$resp = Invoke-WebRequest -Uri 'https://config.mypikpak.net/config/v1/client_version' -Method Post -Body $req_body",
             "$resp_json = $resp.Content | ConvertFrom-Json",
             "$version = $resp_json.values.client_version.newVersionName",
             "Write-Output $version"
@@ -28,6 +28,6 @@
         "regex": "(?<version>[\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://api-drive.mypikpak.com/package/v1/download/official_PikPak.exe?pf=windows&tf=official#/dl.7z"
+        "url": "https://api-drive.mypikpak.net/package/v1/download/official_PikPak.exe?pf=windows&tf=official#/dl.7z"
     }
 }
