@@ -5,7 +5,7 @@
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://cn.download.nvidia.com//Windows/566.03/566.03-desktop-win10-win11-64bit-international-dch-whql.exe#/dl.7z",
+            "url": "https://cn.download.nvidia.com/Windows/566.03/566.03-desktop-win10-win11-64bit-international-dch-whql.exe#/dl.7z",
             "hash": "f70fea7105ec877dbfd3a523a8c6c9b4c5560deeda9012fae0a3ac03cad64305"
         }
     },
@@ -26,7 +26,7 @@
             "$version = $json.IDS[0].downloadInfo.Version",
             "$url = $json.IDS[0].downloadInfo.DownloadURL",
             "$uri = New-Object System.Uri($url)",
-            "$path = $uri.PathAndQuery",
+            "$path = $uri.PathAndQuery.TrimStart('/')",
             "Write-Output \"$version $path\""
         ],
         "regex": "(?<version>.+)\\s(?<path>.+)"
