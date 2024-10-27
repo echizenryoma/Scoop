@@ -14,6 +14,7 @@
         "script": [
             "if(!(is_admin)) { error 'This package requires admin rights to install'; break }",
             "if ([environment]::OSVersion.Version.Major -lt 10) { error 'This package requires Windows 10/11 to install'; break }",
+            "Remove-Item \"$dir\\setup\\GFExperience\" -Force -Recurse",
             "Start-Process -Wait \"$dir\\setup\\setup.exe\" \"-s -noreboot\" -Verb RunAs",
             "Remove-Item \"$dir\\setup\" -Force -Recurse"
         ]
