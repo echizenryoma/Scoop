@@ -9,25 +9,18 @@
             "hash": "f70fea7105ec877dbfd3a523a8c6c9b4c5560deeda9012fae0a3ac03cad64305"
         }
     },
-    "extract_to": "extract",
+    "extract_to": "setup",
     "installer": {
         "script": [
             "if(!(is_admin)) { error 'This package requires admin rights to install'; break }",
             "if ([environment]::OSVersion.Version.Major -lt 10) { error 'This package requires Windows 10/11 to install'; break }",
-            "Move-Item \"$dir\\extract\\Display.Driver\" -Destination \"$dir\\setup\"",
-            "Move-Item \"$dir\\extract\\Display.Optimus\" -Destination \"$dir\\setup\"",
-            "Move-Item \"$dir\\extract\\HDAudio\" -Destination \"$dir\\setup\"",
-            "Move-Item \"$dir\\extract\\NVI2\" -Destination \"$dir\\setup\"",
-            "Move-Item \"$dir\\extract\\PhysX\" -Destination \"$dir\\setup\"",
-            "Move-Item \"$dir\\extract\\*.txt\" -Destination \"$dir\\setup\"",
-            "Move-Item \"$dir\\extract\\setup.*\" -Destination \"$dir\\setup\"",
-            "# The installer will not run without these legal files",
-            "New-Item \"$dir\\setup\\GFExperience\" -ItemType Directory | Out-Null",
-            "Move-Item \"$dir\\extract\\GFExperience\\PrivacyPolicy\" -Destination \"$dir\\setup\\GFExperience\"",
-            "Move-Item \"$dir\\extract\\GFExperience\\EULA.html\" -Destination \"$dir\\setup\\GFExperience\"",
-            "Move-Item \"$dir\\extract\\GFExperience\\FunctionalConsent*\" -Destination \"$dir\\setup\\GFExperience\"",
-            "Start-Process -Wait \"$dir\\setup\\setup.exe\" \"-s -noreboot\" -Verb RunAs",
-            "Remove-Item \"$dir\\extract\" -Force -Recurse"
+            "New-Item \"$dir\\setup\\GFExperience.new\" -ItemType Directory | Out-Null",
+            "Move-Item \"$dir\\setup\\GFExperience\\PrivacyPolicy\" -Destination \"$dir\\setup\\GFExperience.new\"",
+            "Move-Item \"$dir\\setup\\GFExperience\\EULA.html\" -Destination \"$dir\\setup\\GFExperience.new\"",
+            "Move-Item \"$dir\\setup\\GFExperience\\FunctionalConsent*\" -Destination \"$dir\\setup\\GFExperience.new\"",
+            "Remove-Item \"$dir\\setup\\GFExperience\" -Force -Recurse",
+            "Move-Item \"$dir\\setup\\GFExperience.new\" -Destination \"$dir\\setup\\GFExperience\"",
+            "Start-Process -Wait \"$dir\\setup\\setup.exe\" \"-s -noreboot\" -Verb RunAs"
         ]
     },
     "uninstaller": {
