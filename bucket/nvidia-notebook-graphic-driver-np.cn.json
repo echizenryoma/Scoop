@@ -9,7 +9,7 @@
             "hash": "f70fea7105ec877dbfd3a523a8c6c9b4c5560deeda9012fae0a3ac03cad64305"
         }
     },
-    "extract_to": "extra",
+    "extract_to": "extract",
     "installer": {
         "script": [
             "if(!(is_admin)) { error 'This package requires admin rights to install'; break }",
