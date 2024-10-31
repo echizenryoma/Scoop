@@ -1,10 +1,10 @@
 {
-    "version": "2.19.2",
+    "version": "2.19.3",
     "description": "Trade at your fingertips, plus easy-to-use 360-degree analytic tools and an exclusive trading community",
     "homepage": "https://longbridge.com",
     "license": "Shareware",
-    "url": "https://download.lbkrs.com/longbridge-desktop/prod/longbridge-pro-2.19.2-win-ia32.exe#/dl.7z",
-    "hash": "961706cb9b1876b205e6b84e374b492e4ae62935a8946ba678644086040e8470",
+    "url": "https://download.lbkrs.com/longbridge-desktop/prod/longbridge-pro-2.19.3-win-ia32.exe#/dl.7z",
+    "hash": "0e9d124257ddb198a99ef6941fabbd1f3bd092e2c21957ea11806a140dfafcff",
     "shortcuts": [
         [
             "Longbridge Pro.exe",
