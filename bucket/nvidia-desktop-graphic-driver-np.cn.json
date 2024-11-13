@@ -23,13 +23,6 @@
             "Start-Process -Wait \"$dir\\setup\\setup.exe\" \"-s -noreboot\" -Verb RunAs"
         ]
     },
-    "uninstaller": {
-        "script": [
-            "if(!(is_admin)) { error 'This package requires admin rights to install'; break }",
-            "if ([environment]::OSVersion.Version.Major -lt 10) { error 'This package requires Windows 10/11 to install'; break }",
-            "Start-Process -Wait \"$dir\\setup\\setup.exe\" \"-uninstall -s -noreboot\" -Verb RunAs"
-        ]
-    },
     "checkver": {
         "script": [
             "$resp = Invoke-WebRequest -Uri 'https://gfwsl.geforce.com/services_toolkit/services/com/nvidia/services/AjaxDriverService.php?func=DriverManualLookup&psid=127&osID=135&languageCode=2052&beta=0&isWHQL=0&dltype=-1&dch=1&upCRD=0&qnf=0&sort1=1&numberOfResults=1'",
