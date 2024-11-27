@@ -1,5 +1,5 @@
 {
-    "version": "1.6",
+    "version": "1.7",
     "homepage": "https://www.sordum.org/reduce-memory/",
     "description": "A small tool for freeing up RAM memory.",
     "license": {
@@ -7,7 +7,7 @@
         "url": "https://www.sordum.org/eula/"
     },
     "url": "https://www.sordum.org/files/download/reduce-memory/ReduceMemory.zip",
-    "hash": "8381123114d1817365b08fa86a808a794f5ef472720aa49a055217b6e0c8b0e7",
+    "hash": "2574fdee703a3574663d9ee1966a8c5626d90d5c786d683e8dd97ac9ff7574d8",
     "architecture": {
         "64bit": {
             "bin": [
