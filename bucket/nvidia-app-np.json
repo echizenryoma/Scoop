@@ -1,0 +1,36 @@
+{
+    "version": "11.0.1.163",
+    "description": "The NVIDIA App is the essential companion for PC gamers and creators.",
+    "homepage": "https://www.nvidia.com/Download/index.aspx",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://us.download.nvidia.com/nvapp/client/11.0.1.163/NVIDIA_app_v11.0.1.163.exe#/dl.7z",
+            "hash": "93545a9208c1d8d25ff407e43708d1204b059877164d9cf07b58fda66174794f"
+        }
+    },
+    "extract_to": "setup",
+    "installer": {
+        "script": [
+            "if(!(is_admin)) { error 'This package requires admin rights to install'; break }",
+            "if ([environment]::OSVersion.Version.Major -lt 10) { error 'This package requires Windows 10/11 to install'; break }",
+            "Start-Process -Wait \"$dir\\setup\\setup.exe\" \"-s -noreboot\" -Verb RunAs"
+        ]
+    },
+    "checkver": {
+        "script": [
+            "$resp = Invoke-WebRequest -Uri 'https://www.nvidia.com/en-us/software/nvidia-app/'",
+            "$url = ($resp.Links.href -match '.exe$')[0]",
+            "$version = ($url -split '/' -match '\\d+(\\.\\d+)+$')[0]",
+            "Write-Output \"$version\""
+        ],
+        "regex": "(?<version>.+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://us.download.nvidia.com/nvapp/client/$version/NVIDIA_app_v$version.exe#/dl.7z"
+            }
+        }
+    }
+}
