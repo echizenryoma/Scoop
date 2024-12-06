@@ -14,12 +14,6 @@
         "script": [
             "if(!(is_admin)) { error 'This package requires admin rights to install'; break }",
             "if ([environment]::OSVersion.Version.Major -lt 10) { error 'This package requires Windows 10/11 to install'; break }",
-            "New-Item \"$dir\\setup\\GFExperience.new\" -ItemType Directory | Out-Null",
-            "Move-Item \"$dir\\setup\\GFExperience\\PrivacyPolicy\" -Destination \"$dir\\setup\\GFExperience.new\"",
-            "Move-Item \"$dir\\setup\\GFExperience\\EULA.html\" -Destination \"$dir\\setup\\GFExperience.new\"",
-            "Move-Item \"$dir\\setup\\GFExperience\\FunctionalConsent*\" -Destination \"$dir\\setup\\GFExperience.new\"",
-            "Remove-Item \"$dir\\setup\\GFExperience\" -Force -Recurse",
-            "Move-Item \"$dir\\setup\\GFExperience.new\" -Destination \"$dir\\setup\\GFExperience\"",
             "Start-Process -Wait \"$dir\\setup\\setup.exe\" \"-s -noreboot\" -Verb RunAs"
         ]
     },
