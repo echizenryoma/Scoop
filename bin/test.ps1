@@ -4,7 +4,7 @@
 
 $pesterConfig = New-PesterConfiguration -Hashtable @{
     Run    = @{
-        Path     = "$PSScriptRoot/.."
+        Path     = "$PSScriptRoot/../bucket"
         PassThru = $true
     }
     Output = @{
