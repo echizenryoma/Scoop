@@ -22,7 +22,6 @@
         "**/.hg": true,
         "**/CVS": true,
         "**/.DS_Store": true,
-        "**/tmp": true,
-        ".vscode/**": true
+        "**/tmp": true
     }
 }
