@@ -17,9 +17,9 @@
     ],
     "checkver": {
         "script": [
-            "$resp = Invoke-WebRequest -UseBasicParsing -Uri 'https://windows-repair-toolbox.com'",
-            "$version = (($resp.Content -split '<|>|\\(|\\)|\\n' -match 'Program\\s+version')[0].Trim() -split '\\s|;' -match '\\d+(\\.\\d+)+')[0]",
-            "Write-Output $version"
+            "$resp = Invoke-WebRequest -UseBasicParsing -Uri 'https://windows-repair-toolbox.com/changelog.txt'",
+            "$version = ($resp.Content -split '\\s' -match '\\d+(\\.\\d+)+')[0]",
+            "Write-Output \"$version\""
         ],
         "regex": "(?<version>.+)"
     },
