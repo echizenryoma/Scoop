@@ -1,0 +1,27 @@
+{
+    "version": "14.39.16158",
+    "description": "One-Stop Trading Platform for Hong Kong, US and China Connect Stocks",
+    "homepage": "https://www.futunn.com",
+    "license": "Freeware",
+    "url": "https://softwaredownload.futunn.com/FTNN_14.39.16158.exe#/dl.7z",
+    "hash": "551cc2e911bbd59b3d021ba1e25667e5aa4d861110c96c79e29927507d5d1425",
+    "shortcuts": [
+        [
+            "FTNN.exe",
+            "FTNN"
+        ]
+    ],
+    "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$_14_\" -Recurse",
+    "checkver": {
+        "script": [
+            "$resp = Invoke-WebRequest -Uri 'https://www.futunn.com/download/history?client=10'",
+            "$json = $resp.Content | ConvertFrom-Json",
+            "$version = ($json.data | Where-Object is_beta -eq 0)[0].version",
+            "Write-Output \"$version\""
+        ],
+        "regex": "(?<version>.+)"
+    },
+    "autoupdate": {
+        "url": "https://softwaredownload.futunn.com/FTNN_$version.exe#/dl.7z"
+    }
+}
