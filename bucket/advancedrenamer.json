@@ -21,7 +21,7 @@
     ],
     "persist": [
         "BatchMethods",
-        "Data"
+        "AdvData"
     ],
     "checkver": {
         "url": "https://www.advancedrenamer.com/versionlog4",
