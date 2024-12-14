@@ -1,10 +1,10 @@
 {
-    "version": "3.0.4.4",
+    "version": "3.0.4.5",
     "description": "Windows Repair Toolbox (freeware) is a software created to help you repair a Windows system, by making the process faster, easier and uniform.",
     "license": "Freeware",
     "homepage": "https://windows-repair-toolbox.com",
     "url": "https://windows-repair-toolbox.com/files/Windows_Repair_Toolbox.zip",
-    "hash": "e6daba1ac1bde9bf3661d2449eb8f20dbdc79626380feca8e5f6e0eed2688ac4",
+    "hash": "b24c86d2cd42e40ba20de4ac31c59fffc1661307f9f3075b069eba0595bd785d",
     "shortcuts": [
         [
             "Windows_Repair_Toolbox.exe",
