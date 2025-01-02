@@ -1,5 +1,5 @@
 {
-    "version": "0.2);",
+    "version": "3.0.4.5",
     "description": "Windows Repair Toolbox (freeware) is a software created to help you repair a Windows system, by making the process faster, easier and uniform.",
     "license": "Freeware",
     "homepage": "https://windows-repair-toolbox.com",
@@ -18,7 +18,7 @@
     "checkver": {
         "script": [
             "$resp = Invoke-WebRequest -UseBasicParsing -Uri 'https://windows-repair-toolbox.com/changelog.txt'",
-            "$version = ($resp.Content -split '\\s' -match '\\d+(\\.\\d+)+')[0]",
+            "$version = (($resp.Content -split '\\n|-' -match 'Version\\s+\\d+(\\.\\d+)+')[0] -split '\\s')[1]",
             "Write-Output \"$version\""
         ],
         "regex": "(?<version>.+)"
