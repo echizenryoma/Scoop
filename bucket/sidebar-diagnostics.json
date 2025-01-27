@@ -9,6 +9,7 @@
             "hash": "28d28b7ad7bcb3d7dfea3ad97acc33289c142d973a5d1327c186c3e8fb1f7e98"
         }
     },
+    "extract_dir": "SidebarDiagnostics_app-3.6.3b",
     "shortcuts": [
         [
             "SidebarDiagnostics.exe",
@@ -22,7 +23,8 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/thewriteway/SidebarDiagnostics/releases/download/$version/SidebarDiagnostics_app-$version.zip"
+                "url": "https://github.com/thewriteway/SidebarDiagnostics/releases/download/$version/SidebarDiagnostics_app-$version.zip",
+                "extract_dir": "SidebarDiagnostics_app-$version"
             }
         }
     }
