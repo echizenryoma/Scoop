@@ -1,0 +1,29 @@
+{
+    "version": "3.6.3b",
+    "description": "A simple sidebar that displays hardware diagnostic information.",
+    "homepage": "https://github.com/thewriteway/SidebarDiagnostics",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/thewriteway/SidebarDiagnostics/releases/download/3.6.3b/SidebarDiagnostics_app-3.6.3b.zip",
+            "hash": "28d28b7ad7bcb3d7dfea3ad97acc33289c142d973a5d1327c186c3e8fb1f7e98"
+        }
+    },
+    "shortcuts": [
+        [
+            "SidebarDiagnostics.exe",
+            "Sidebar Diagnostics"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/thewriteway/SidebarDiagnostics/releases/latest",
+        "jsonpath": "$.tag_name"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/thewriteway/SidebarDiagnostics/releases/download/$version/SidebarDiagnostics_app-$version.zip"
+            }
+        }
+    }
+}
