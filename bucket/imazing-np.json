@@ -1,0 +1,32 @@
+{
+    "version": "3.0.6.1",
+    "description": "Manage your iPhone. Your way.",
+    "license": "Proprietary",
+    "homepage": "https://imazing.com/",
+    "url": "https://downloads.imazing.com/windows/iMazing/3.0.6.1/iMazing_3.0.6.1.exe#/setup.exe",
+    "hash": "d84aea2ba09a3a2fd0797b3ee93710d5bb3faa4fb21c0e10eea96b9d3ce6eb69",
+    "installer": {
+        "args": [
+            "/verysilent",
+            "/nocancel",
+            "/norestart",
+            "/dir=\"$dir\""
+        ]
+    },
+    "pre_install": "if (-not (is_admin)) { error \"Administrator rights are required to install $app.\"; return }",
+    "uninstaller": {
+        "file": "unins000.exe",
+        "args": [
+            "/verysilent",
+            "/nocancel",
+            "/norestart"
+        ]
+    },
+    "checkver": {
+        "url": "https://downloads.imazing.com/com.DigiDNA.iMazing3Windows.xml",
+        "xpath": "//channel/item[1]/enclosure/@sparkle:version"
+    },
+    "autoupdate": {
+        "url": "https://downloads.imazing.com/windows/iMazing/$version/iMazing_$version.exe#/setup.exe"
+    }
+}
