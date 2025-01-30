@@ -1,12 +1,12 @@
 {
-    "version": "566.36",
+    "version": "572.16",
     "description": "NVIDIA display driver (DCH)",
     "homepage": "https://www.nvidia.com/Download/index.aspx",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://cn.download.nvidia.com/Windows/566.36/566.36-notebook-win10-win11-64bit-international-dch-whql.exe#/dl.7z",
-            "hash": "5a5e048950bb09bef8c6e44b2b552811c8eb8bc874b99b3fbecc116c38014438"
+            "url": "https://cn.download.nvidia.com/Windows/572.16/572.16-notebook-win10-win11-64bit-international-dch-whql.exe#/dl.7z",
+            "hash": "44b5eb432d44ecc3e0c37ffc15c1711759711d4bdbae91695d013f064604888f"
         }
     },
     "extract_to": "setup",
