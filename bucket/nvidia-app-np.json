@@ -1,12 +1,12 @@
 {
-    "version": "11.0.1.189",
+    "version": "11.0.2.312",
     "description": "The NVIDIA App is the essential companion for PC gamers and creators.",
     "homepage": "https://www.nvidia.com/Download/index.aspx",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://us.download.nvidia.com/nvapp/client/11.0.1.189/NVIDIA_app_v11.0.1.189.exe#/dl.7z",
-            "hash": "f9d3e9aad532d4a9a804b14667fdcb71cd6ab8cbeca7089e49fbeca77ac7c653"
+            "url": "https://us.download.nvidia.com/nvapp/client/11.0.2.312/NVIDIA_app_v11.0.2.312.exe#/dl.7z",
+            "hash": "8775f1cf69a3fae4bf6d1df6b68c91e51011c12ee4b63a677991bcdaa6acbc85"
         }
     },
     "extract_to": "setup",
