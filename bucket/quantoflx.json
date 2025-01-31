@@ -1,13 +1,13 @@
 {
-    "version": "2.00.1100",
+    "version": "2.00.1101",
     "description": "A desktop customization tool based on Rainmeter",
     "homepage": "https://github.com/stevehsudrawing/quantoflx",
     "license": {
         "identifier": "Freeware",
         "url": "https://raw.githubusercontent.com/stevehsudrawing/quantoflx/refs/heads/main/LICENSE.txt"
     },
-    "url": "https://github.com/stevehsudrawing/quantoflx/releases/download/1100/Quanto.Flx_2.00.Gamma.rmskin#/quantoflx.rmskin",
-    "hash": "c54b775ee9e5cf9202d6bc4cba3acd88b60c8c0049ee8c7a9c47060e9817e9cd",
+    "url": "https://github.com/stevehsudrawing/quantoflx/releases/download/1101/Quanto.Flx_2.00.Delta.Build.1101.rmskin#/quantoflx.rmskin",
+    "hash": "49d6bec3dd2d65092b7d58d50e1d0acc11f2e049b222aecb1c77c368bb69268d",
     "depends": "rainmeter",
     "checkver": {
         "script": [
