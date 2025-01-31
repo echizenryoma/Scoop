@@ -6,6 +6,7 @@
         "identifier": "Freeware",
         "url": "https://github.com/nmap/npcap/blob/master/LICENSE"
     },
+    "depends": "autohotkey",
     "architecture": {
         "64bit": {
             "url": [
@@ -33,9 +34,6 @@
             "Start-Process \"$env:ProgramFiles\\Npcap\\uninstall.exe\" -Wait -Verb 'RunAs' -Args '/S'",
             "Remove-Item  \"$env:ProgramFiles\\Npcap\" -Recurse -Force"
         ]
-    },
-    "suggest": {
-        "autohotkey": "extra/autohotkey"
     },
     "checkver": "Npcap\\s([\\d.]+)\\s",
     "autoupdate": {
