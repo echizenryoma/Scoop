@@ -7,12 +7,8 @@
         "url": "https://www.sordum.org/eula/"
     },
     "url": "https://www.sordum.org/files/easy-context-menu/ec_menu.zip",
-    "hash": "e28b9c0f52ce7ecd28a83ed18ab9132e446aa8c0199f5a0156b1252a867c7ac5",
-    "pre_install": [
-        "$AppPath = (Get-ChildItem -Path $original_dir -Recurse -Include 'EcMenu.exe')[0].Directory",
-        "Copy-Item -Path $(Join-Path $AppPath '*') -Destination $original_dir -Recurse -Force",
-        "Remove-Item -Path $AppPath -Recurse -Force"
-    ],
+    "hash": "ddf592571cb9a484b2bfae75a8bae157ec52beabc0cdc71f76a3b3de9ea933c0",
+    "extract_dir": "EcMenu_v1.6",
     "architecture": {
         "32bit": {
             "bin": "EcMenu.exe",
@@ -41,6 +37,7 @@
     "persist": "Files",
     "checkver": "Easy\\sContext\\sMenu\\sv([\\d.]+)",
     "autoupdate": {
-        "url": "https://www.sordum.org/files/easy-context-menu/ec_menu.zip"
+        "url": "https://www.sordum.org/files/easy-context-menu/ec_menu.zip",
+        "extract_dir": "EcMenu_v$version"
     }
 }
