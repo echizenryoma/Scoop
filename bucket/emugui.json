@@ -1,0 +1,28 @@
+{
+    "version": "2.0.9.5620",
+    "description": "QEMU interfaces",
+    "homepage": "https://github.com/Tech-FZ/EmuGUI",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Tech-FZ/EmuGUI/releases/download/v2.0.9.5620/EmuGUI_v2.0.9.5620_Win_amd64.zip",
+            "hash": "211e3f76e37f24a077a319cf980c16be372ac7da7e3b90dfe199b3f4ace7502c"
+        }
+    },
+    "extract_dir": "EmuGUI_v2.0.9.5620_Win_amd64",
+    "shortcuts": [
+        [
+            "emugui.exe",
+            "EmuGUI"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Tech-FZ/EmuGUI/releases/download/v$version/EmuGUI_v$version_Win_amd64.zip"
+            }
+        },
+        "extract_dir": "EmuGUI_v$version_Win_amd64"
+    }
+}
