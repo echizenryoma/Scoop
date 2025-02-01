@@ -8,11 +8,7 @@
     },
     "url": "https://www.sordum.org/files/download/windows-settings-blocker/WsBlocker.zip",
     "hash": "91f5d82362edca15a31d69655d6c8b360a695807c65de6aa98285d12ca8f0f47",
-    "pre_install": [
-        "$AppPath = (Get-ChildItem -Path $original_dir -Recurse -Include '*.exe')[0].Directory",
-        "Copy-Item -Path $(Join-Path $AppPath '*') -Destination $original_dir -Recurse -Force",
-        "Remove-Item -Path $AppPath -Recurse -Force"
-    ],
+    "extract_dir": "WsBlocker",
     "architecture": {
         "32bit": {
             "shortcuts": [
