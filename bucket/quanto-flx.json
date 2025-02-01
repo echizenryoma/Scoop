@@ -22,6 +22,7 @@
         ],
         "regex": "(?<version>.+)\\s(?<tag>.+)\\s(?<name>.+)"
     },
+    "notes": "quanto-flx can be installed by SkinInstaller.exe",
     "autoupdate": {
         "url": "https://github.com/stevehsudrawing/quantoflx/releases/download/$matchTag/$matchName#/quantoflx.rmskin"
     }
