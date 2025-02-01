@@ -7,7 +7,8 @@
     },
     "homepage": "https://www.sordum.org/store-apps-tool",
     "url": "https://www.sordum.org/files/download/store-apps-tool/StoreAT.zip",
-    "hash": "e70ee939a588910f7b89e1df9696743e2231ed06245ae4029ed77d1c7ce653e8",
+    "hash": "da87c3a7d25cb3322d8dd4ff224b09be111e536aa781d90af5f974987e46f242",
+    "extract_dir": "StoreAT",
     "architecture": {
         "64bit": {
             "bin": [
@@ -34,11 +35,6 @@
         }
     },
     "persist": "StoreAT.ini",
-    "pre_install": [
-        "$AppPath = (Get-ChildItem -Path $original_dir -Recurse -Include '*.exe')[0].Directory",
-        "Copy-Item -Path $(Join-Path $AppPath '*') -Destination $original_dir -Recurse -Force",
-        "Remove-Item -Path $AppPath -Recurse -Force"
-    ],
     "checkver": "Store\\sApps\\sTool\\sv([\\d.]+)",
     "autoupdate": {
         "url": "https://www.sordum.org/files/download/store-apps-tool/StoreAT.zip"
