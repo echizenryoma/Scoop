@@ -1,0 +1,41 @@
+{
+    "version": "400",
+    "description": "SmartVersion is a new shareware from Gilles Vollant, the creator of WinImage. ",
+    "homepage": "https://smartversion.com/",
+    "license": {
+        "identifier": "Shareware",
+        "url": "https://smartversion.com/order.htm"
+    },
+    "notes": "SmartVersion is shareware; must be registered or reset after 30 days.",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.smartversion.com/smartvs400_x64.zip",
+            "hash": "57a08915a4d38f0fba2e96ec820ec8a4acdbde1899623fd886f74e168ec044eb"
+        },
+        "32bit": {
+            "url": "https://www.smartversion.com/smartvs400_x86.zip",
+            "hash": "02ab31d25cfcd5b029bcceffb6022d31ecad7ca27356326572ae14c33b29074e"
+        }
+    },
+    "bin": "smv.exe",
+    "shortcuts": [
+        [
+            "smartvs.exe",
+            "SmartVersion"
+        ]
+    ],
+    "checkver": {
+        "url": "https://smartversion.com/download.htm",
+        "regex": "https://www.smartversion.com/smartvs([\\d\\.]+)_x64.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.smartversion.com/smartvs$version_x64.zip"
+            },
+            "32bit": {
+                "url": "https://www.smartversion.com/smartvs$version_x86.zip"
+            }
+        }
+    }
+}
