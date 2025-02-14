@@ -33,7 +33,8 @@
     ],
     "persist": "bitwarden-appdata",
     "env_set": {
-        "BITWARDEN_APPDATA_DIR": "$dir\\bitwarden-appdata"
+        "BITWARDEN_APPDATA_DIR": "$dir\\bitwarden-appdata",
+        "ELECTRON_NO_UPDATER": "1"
     },
     "checkver": {
         "url": "https://api.github.com/repositories/53538899/releases",
