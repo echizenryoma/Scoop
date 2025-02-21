@@ -5,7 +5,7 @@
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://cn.download.nvidia.com/Windows/572.47/572.47-notebook-win10-win11-64bit-international-dch-whql.exe#/dl.7z",
+            "url": "https://us.download.nvidia.com/Windows/572.47/572.47-desktop-win10-win11-64bit-international-dch-whql.exe#/dl.7z",
             "hash": "8a959b345d856614c4bda7daf6672f8d46f1ab0b0738696691a567dfd98a4fd9"
         }
     },
@@ -19,7 +19,7 @@
     },
     "checkver": {
         "script": [
-            "$resp = Invoke-WebRequest -Uri 'https://gfwsl.geforce.com/services_toolkit/services/com/nvidia/services/AjaxDriverService.php?func=DriverManualLookup&psid=129&pfid=1004&osID=135&languageCode=1033&beta=0&isWHQL=0&dltype=-1&dch=1&upCRD=0&qnf=0&sort1=1&numberOfResults=1'",
+            "$resp = Invoke-WebRequest -Uri 'https://gfwsl.geforce.com/services_toolkit/services/com/nvidia/services/AjaxDriverService.php?func=DriverManualLookup&psid=127&osID=135&languageCode=2052&beta=0&isWHQL=0&dltype=-1&dch=1&upCRD=0&qnf=0&sort1=1&numberOfResults=1'",
             "$json = $resp.Content | ConvertFrom-Json",
             "$version = $json.IDS[0].downloadInfo.Version",
             "$url = $json.IDS[0].downloadInfo.DownloadURL",
@@ -32,7 +32,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://cn.download.nvidia.com/$matchPath#/dl.7z"
+                "url": "https://us.download.nvidia.com/$matchPath#/dl.7z"
             }
         }
     }
