@@ -12,6 +12,9 @@
             "hash": "d0f62805019d1ca5a1d5bafdf4d030dd782bd17abecea0662a5197563825ec8b"
         }
     },
+    "suggest": {
+        "vcredist2022": "extras/vcredist2022"
+    },
     "installer": {
         "script": [
             "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
