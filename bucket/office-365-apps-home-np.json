@@ -17,7 +17,8 @@
         "8c20cfcbfc474d5159dc59f71fb35abeb2135879f767336631a47b0b0c0982e1"
     ],
     "pre_install": [
-        "Start-Process -Wait \"7z.exe\" -ArgumentList @('x', \"$dir\\dl.7z_\", \"-o$dir\", '-y') -ErrorAction SilentlyContinue"
+        "Start-Process -Wait \"7z.exe\" -ArgumentList @('x', \"$dir\\dl.7z_\", \"-o$dir\", '-y') -ErrorAction SilentlyContinue",
+        "Remove-Item -Path \"$dir\\dl.7z_\" -Force"
     ],
     "installer": {
         "script": "Start-Process -Wait \"$dir\\setup.exe\" -ArgumentList @('/configure', \"$dir\\install-office-365-apps-home.xml\")"
