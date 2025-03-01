@@ -1,0 +1,15 @@
+
+<Configuration>
+    <Add OfficeClientEdition="64" >
+        <Product ID="O365HomePremRetail">
+            <Language ID="MatchOS" />
+            <ExcludeApp ID="Access" />
+            <ExcludeApp ID="OneDrive" />
+            <ExcludeApp ID="Outlook" />
+            <ExcludeApp ID="Publisher" />
+        </Product>
+    </Add>
+    <Updates Enabled="TRUE" />
+    <Display Level="None" AcceptEULA="TRUE" />
+    <Logging Path="%TEMP%" />
+</Configuration>
