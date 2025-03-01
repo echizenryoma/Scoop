@@ -1,0 +1,55 @@
+{
+    "version": "17.6.2",
+    "homepage": "https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion",
+    "description": "An application for creating and running virtual machines on your computer.",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.broadcom.com/company/legal/terms-of-use"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://softwareupdate.broadcom.com/cds/vmw-desktop/ws/17.6.2/24409262/windows/core/VMware-workstation-17.6.2-24409262.exe.tar#/setup.exe.tar",
+            "hash": "d0f62805019d1ca5a1d5bafdf4d030dd782bd17abecea0662a5197563825ec8b"
+        }
+    },
+    "installer": {
+        "script": [
+            "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+            "(Get-ChildItem -Path \"$dir\" -Filter '*.exe' -File)[0] | Rename-Item -NewName 'setup.exe'",
+            "Start-Process \"$dir\\setup.exe\" -Wait -Verb 'RunAs' -ArgumentList '/x'",
+            "Remove-Item \"$dir\\setup.exe\"",
+            "$msi = (Get-ChildItem \"$Env:TEMP\" -Filter 'VMware*.msi' -Recurse -Force).FullName",
+            "Copy-Item $msi \"$dir\\setup.msi\" -Force",
+            "Start-Process 'msiexec' -Wait -Verb 'RunAs' -ArgumentList @('/i', \"$dir\\setup.msi\", '/qn', '/norestart', 'REBOOT=ReallySuppress', 'EULAS_AGREED=1', 'ADDLOCAL=ALL')",
+            "Remove-Item $msi -Force"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "if ($cmd -eq 'uninstall') {",
+            "   if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+            "   Start-Process 'msiexec' -Wait -Verb 'RunAs' -ArgumentList @('/x', \"$dir\\setup.msi\", '/qn', '/norestart', 'REBOOT=ReallySuppress')",
+            "   Start-Sleep -Seconds 2",
+            "   Write-Host \"Please restart your computer to uninstall $app properly\" -F 'Red'",
+            "}"
+        ]
+    },
+    "checkver": {
+        "script": [
+            "$page = Invoke-WebRequest -Uri 'https://softwareupdate.broadcom.com/cds/vmw-desktop/ws-windows.xml'",
+            "$xml = [xml][System.Text.Encoding]::UTF8.GetString($page.Content)",
+            "$obj = ($xml.metaList.metadata | Sort-Object -Descending {[version]$_.version })[0]",
+            "$build = ($obj.url -split '/' -match '^\\d+$')[0]",
+            "$version = $obj.version",
+            "Write-Output \"$version $build\""
+        ],
+        "regex": "(?<version>.+)\\s(?<build>.+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://softwareupdate.broadcom.com/cds/vmw-desktop/ws/$version/$matchBuild/windows/core/VMware-workstation-$version-$matchBuild.exe.tar#/setup.exe.tar"
+            }
+        }
+    }
+}
