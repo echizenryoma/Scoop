@@ -13,19 +13,14 @@
             "hash": "8a20a04faf615ce8c1f3a9055eba010eeadd267793f80f2e8a09438c1d5764ff"
         }
     },
+    "pre_install": [
+        "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }"
+    ],
     "installer": {
-        "script": [
-            "$programname = \"Microsoft OneDrive*\"",
-            "$LocalAppData = [Environment]::GetFolderPath(\"LocalApplicationData\")",
-            "$filepath = \"$LocalAppData\\Microsoft\\OneDrive\\OneDrive.exe\"",
-            "if(((Test-Path -Path $filepath -PathType Leaf) -eq $false) -or ((Get-Command $filepath).Version -lt [System.Version]\"$version\"))",
-            "{",
-            "   &\"$dir\\OneDriveSetup.exe\" /silent /update /restart | Out-Null",
-            "   if(((Test-Path -Path $filepath -PathType Leaf) -eq $false) -or ((Get-Command $filepath).Version -lt [System.Version]\"$version\"))",
-            "   {",
-            "       exit 1",
-            "   }",
-            "}"
+        "args": [
+            "/silent",
+            "/update",
+            "/restart"
         ]
     },
     "checkver": {
