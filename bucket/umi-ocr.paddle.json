@@ -16,6 +16,9 @@
             "Umi-OCR"
         ]
     ],
+    "persist": [
+        "plugins"
+    ],
     "checkver": "github",
     "autoupdate": {
         "architecture": {
