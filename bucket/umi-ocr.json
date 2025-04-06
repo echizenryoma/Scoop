@@ -17,7 +17,7 @@
         ]
     ],
     "persist": [
-        "plugins"
+        "UmiOCR-data\\plugins"
     ],
     "checkver": "github",
     "autoupdate": {
