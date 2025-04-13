@@ -1,20 +1,20 @@
 {
-    "version": "2025.02.02.0318",
+    "version": "2025.04.13.1427",
     "description": "As a system's built-in browser, Edge is complex and often redundant. Moreover, Microsoft frequently \"recommends\" unwanted features through pop-ups and notifications.",
     "license": "GPL-3.0-only",
     "homepage": "https://github.com/NXY666/EdgePolicyManager",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/NXY666/EdgePolicyManager/releases/download/v2025.02.02.0318/EdgePolicyManager-v2025.02.02.0318-x86.exe#/EdgePolicyManager.exe",
-            "hash": "52587eebcb4067e20dde1bed271d1fd69abe91d4dc883f290d12043de3bb4a70"
+            "url": "https://github.com/NXY666/EdgePolicyManager/releases/download/v2025.04.13.1427/EdgePolicyManager-v2025.04.13.1427-x86.exe#/EdgePolicyManager.exe",
+            "hash": "79b9b6902fd8d77bece913d4f6ed40fa60a9a6acc7517502503901a89cac5395"
         },
         "64bit": {
-            "url": "https://github.com/NXY666/EdgePolicyManager/releases/download/v2025.02.02.0318/EdgePolicyManager-v2025.02.02.0318-x64.exe#/EdgePolicyManager.exe",
-            "hash": "838a548c59be16ee2e66f244585658a0337021a5ec67739193530f2898771e27"
+            "url": "https://github.com/NXY666/EdgePolicyManager/releases/download/v2025.04.13.1427/EdgePolicyManager-v2025.04.13.1427-x64.exe#/EdgePolicyManager.exe",
+            "hash": "5608e217f429ecdedd7f3dd66c39d0d8288cf138cb517365a942cd530776000b"
         },
         "arm64": {
-            "url": "https://github.com/NXY666/EdgePolicyManager/releases/download/v2025.02.02.0318/EdgePolicyManager-v2025.02.02.0318-arm64.exe#/EdgePolicyManager.exe",
-            "hash": "f41c344e2a41028b99395ea0f31bc129559dc3343fb8817874e86563ddad947c"
+            "url": "https://github.com/NXY666/EdgePolicyManager/releases/download/v2025.04.13.1427/EdgePolicyManager-v2025.04.13.1427-arm64.exe#/EdgePolicyManager.exe",
+            "hash": "b7e2d66773fd2ae87a1d51ef6230c777a8b1fed46a71553030c53dae82012f0e"
         }
     },
     "shortcuts": [
