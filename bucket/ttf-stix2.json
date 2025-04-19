@@ -8,7 +8,10 @@
     },
     "url": "https://github.com/stipub/stixfonts/releases/download/v2.14/fonts.zip",
     "hash": "b9ce7effe9cf97185bc3bfd9b3c5e79e0928a500127d1f55d0a704e04d274420",
-    "extract_dir": "STIXTwoMath/TTF",
+    "extract_dir": [
+        "fonts\\STIXTwoMath\\TTF",
+        "fonts\\STIXTwoText\\TTF"
+    ],
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -47,7 +50,7 @@
             "$registryRoot = if ($global) { \"HKLM\" } else { \"HKCU\" }",
             "$registryKey = \"${registryRoot}:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts\"",
             "New-Item $fontInstallDir -ItemType Directory -ErrorAction SilentlyContinue | Out-Null",
-            "Get-ChildItem \"$dir\\static_ttf\\*.ttf\"  | ForEach-Object {",
+            "Get-ChildItem -Path \"$dir\" -Recurse -Filter \"*.ttf\"  | ForEach-Object {",
             "    $value = if ($global) { $_.Name } else { \"$fontInstallDir\\$($_.Name)\" }",
             "    New-ItemProperty -Path $registryKey -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $value -Force | Out-Null",
             "    Copy-Item $_.FullName -Destination $fontInstallDir",
