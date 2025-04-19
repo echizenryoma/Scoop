@@ -28,7 +28,7 @@
         "script": [
             "$resp = Invoke-WebRequest -Uri 'https://api.github.com/repos/xiaoyifang/goldendict/releases/latest'",
             "$json = $resp.Content | ConvertFrom-Json",
-            "$name = ($json.assets | Where-Object label -Match '.*Windows.*.7z$')[-1].name",
+            "$name = ($json.assets | Where-Object name -Match '.*Windows.*.7z$')[-1].name",
             "$version = $json.tag_name",
             "Write-Output \"$version $name\""
         ],
