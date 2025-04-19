@@ -10,6 +10,6 @@
         "github": "https://github.com/trumank/uesave-rs"
     },
     "autoupdate": {
-        "url": "https://github.com/trumank/uesave-rs/releases/download/v$version/ uesave_cli-x86_64-pc-windows-msvc.zip"
+        "url": "https://github.com/trumank/uesave-rs/releases/download/v$version/uesave_cli-x86_64-pc-windows-msvc.zip"
     }
 }
