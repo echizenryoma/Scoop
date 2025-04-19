@@ -74,6 +74,6 @@
         "jsonpath": "$.tag_name"
     },
     "autoupdate": {
-        "url": "https://github.com/stipub/stixfonts/raw/$version/zipfiles/static_ttf.zip"
+        "url": "https://github.com/stipub/stixfonts/raw/$version/zipfiles/fonts.zip"
     }
 }
