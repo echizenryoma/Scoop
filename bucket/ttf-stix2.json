@@ -1,5 +1,5 @@
 {
-    "version": "v2.13b171",
+    "version": "2.13b171",
     "description": "OpenType Unicode fonts for Scientific, Technical, and Mathematical texts",
     "homepage": "https://github.com/stipub/stixfonts",
     "license": {
@@ -69,11 +69,8 @@
             "}"
         ]
     },
-    "checkver": {
-        "url": "https://api.github.com/repos/stipub/stixfonts/releases/latest",
-        "jsonpath": "$.tag_name"
-    },
+    "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/stipub/stixfonts/raw/$version/zipfiles/fonts.zip"
+        "url": "https://github.com/stipub/stixfonts/releases/download/v$version/fonts.zip"
     }
 }
