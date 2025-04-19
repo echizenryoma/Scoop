@@ -8,6 +8,7 @@
     },
     "url": "https://github.com/stipub/stixfonts/releases/download/v2.14/fonts.zip",
     "hash": "b9ce7effe9cf97185bc3bfd9b3c5e79e0928a500127d1f55d0a704e04d274420",
+    "extract_dir": "STIXTwoMath/TTF",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
