@@ -1,16 +1,16 @@
 {
-    "version": "25.051.0317.0003",
+    "version": "25.070.0413.0001",
     "description": "Microsoft OneDrive. Save your photos and files to OneDrive and access them from any device, anywhere.",
     "homepage": "https://oneclient.sfx.ms",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://oneclient.sfx.ms/Win/Installers/25.051.0317.0003/amd64/OneDriveSetup.exe",
-            "hash": "96268272b97dc508afc5ca043005d394d4dda4033ebfd2fd77f1731f40629657"
+            "url": "https://oneclient.sfx.ms/Win/Installers/25.070.0413.0001/amd64/OneDriveSetup.exe",
+            "hash": "cfabd20fa85f874cb93e14c34bcdca8b1dab82ec934b818601b698f3cba86717"
         },
         "arm64": {
-            "url": "https://oneclient.sfx.ms/Win/Installers/25.051.0317.0003/arm64/OneDriveSetup.exe",
-            "hash": "b658a38d45c6a22485c92f31ca4c7676269c516f5cc1916b0bede3cfacb4e39e"
+            "url": "https://oneclient.sfx.ms/Win/Installers/25.070.0413.0001/arm64/OneDriveSetup.exe",
+            "hash": "c34c9a7eca25a0e416144d5bc9948ead6c24b8e6763850bd9473191bea82654b"
         }
     },
     "pre_install": "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
