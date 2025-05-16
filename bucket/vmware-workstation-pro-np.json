@@ -8,7 +8,7 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://softwareupdate.broadcom.com/cds/vmw-desktop/ws/17.6.3/24583834/windows/core/VMware-workstation-17.6.3-24583834.exe.tar#/setup.exe.tar",
+            "url": "https://softwareupdate-prod.broadcom.com/cds/vmw-desktop/ws/17.6.3/24583834/windows/core/VMware-workstation-17.6.3-24583834.exe.tar#/setup.exe.tar",
             "hash": "2e87994dd2580bc006a0b96ef089f500a718d05c3302d78bd9c85df4439cf67c"
         }
     },
@@ -39,7 +39,7 @@
     },
     "checkver": {
         "script": [
-            "$page = Invoke-WebRequest -Uri 'https://softwareupdate.broadcom.com/cds/vmw-desktop/ws-windows.xml'",
+            "$page = Invoke-WebRequest -Uri 'https://softwareupdate-prod.broadcom.com/cds/vmw-desktop/ws-windows.xml'",
             "$xml = [xml][System.Text.Encoding]::UTF8.GetString($page.Content)",
             "$obj = ($xml.metaList.metadata | Sort-Object -Descending {[version]$_.version })[0]",
             "$build = ($obj.url -split '/' -match '^\\d+$')[0]",
