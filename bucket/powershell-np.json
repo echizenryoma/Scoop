@@ -21,8 +21,10 @@
     },
     "uninstaller": {
         "script": [
-            "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
-            "Start-Process msiexec -ArgumentList @('/x', \"`\"$dir\\setup.msi_`\"\", '/qn', '/norestart') -Wait -Verb RunAs | Out-Null"
+            "if ($cmd -eq 'uninstall') {",
+            "    if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+            "    Start-Process msiexec -ArgumentList @('/x', \"`\"$dir\\setup.msi_`\"\", '/qn', '/norestart') -Wait -Verb RunAs | Out-Null",
+            "}"
         ]
     },
     "checkver": {
