@@ -21,10 +21,18 @@
         "Remove-Item -Path \"$dir\\dl.7z_\" -Force"
     ],
     "installer": {
-        "script": "Start-Process -Wait \"$dir\\setup.exe\" -ArgumentList @('/configure', \"$dir\\install-office-365-apps-home.xml\")"
+        "script": [
+            "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+            "Start-Process -Wait \"$dir\\setup.exe\" -ArgumentList @('/configure', \"$dir\\install-office-365-apps-home.xml\")"
+        ]
     },
     "uninstaller": {
-        "script": "Start-Process -Wait \"$dir\\setup.exe\" -ArgumentList @('/configure', \"$dir\\uninstall-office-365-apps.xml\")"
+        "script": [
+            "if ($cmd -eq 'uninstall') {",
+            "   if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+            "   Start-Process -Wait \"$dir\\setup.exe\" -ArgumentList @('/configure', \"$dir\\uninstall-office-365-apps.xml\")",
+            "}"
+        ]
     },
     "checkver": {
         "script": [
