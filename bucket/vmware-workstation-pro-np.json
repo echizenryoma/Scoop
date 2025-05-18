@@ -1,5 +1,5 @@
 {
-    "version": "17.6.3",
+    "version": "17.6.3.24583834",
     "homepage": "https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion",
     "description": "An application for creating and running virtual machines on your computer.",
     "license": {
@@ -40,18 +40,18 @@
     "checkver": {
         "script": [
             "$page = Invoke-WebRequest -Uri 'https://softwareupdate-prod.broadcom.com/cds/vmw-desktop/ws-windows.xml'",
-            "$xml = [xml][System.Text.Encoding]::UTF8.GetString($page.Content)",
+            "$xml = [xml]($page.Content)",
             "$obj = ($xml.metaList.metadata | Sort-Object -Descending {[version]$_.version })[0]",
             "$build = ($obj.url -split '/' -match '^\\d+$')[0]",
             "$version = $obj.version",
-            "Write-Output \"$version $build\""
+            "Write-Output \"$version.$build\""
         ],
-        "regex": "(?<version>.+)\\s(?<build>.+)"
+        "regex": "(?<version>.+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://softwareupdate.broadcom.com/cds/vmw-desktop/ws/$version/$matchBuild/windows/core/VMware-workstation-$version-$matchBuild.exe.tar#/setup.exe.tar"
+                "url": "https://softwareupdate-prod.broadcom.com/cds/vmw-desktop/ws/$majorVersion.$minorVersion.$patchVersion/$buildVersion/windows/core/VMware-workstation-$majorVersion.$minorVersion.$patchVersion-$buildVersion.exe.tar#/setup.exe.tar"
             }
         }
     }
