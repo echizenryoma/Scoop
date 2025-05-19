@@ -8,7 +8,7 @@
     },
     "url": "https://github.com/stipub/stixfonts/raw/refs/tags/v2.13b171/zipfiles/static_ttf.zip",
     "hash": "c9fd038ffc6cc179f402fffe1b745a9fb6b4470b5f0a8a7e5cf1d5c50d67b837",
-    "extract_dir": "fonts\\STIXTwoMath\\TTF",
+    "extract_dir": "static_ttf",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
