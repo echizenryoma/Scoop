@@ -11,6 +11,10 @@
         "32bit": {
             "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.5.1/PowerShell-7.5.1-win-x86.msi#/setup.msi_",
             "hash": "d1acbb08909c7a9da342b7f343cbf36361e9f1962b34ab11e3ae2f15d97f5771"
+        },
+        "arm64": {
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.5.1/PowerShell-7.5.1-win-arm64.msi#/setup.msi_",
+            "hash": "d1acbb08909c7a9da342b7f343cbf36361e9f1962b34ab11e3ae2f15d97f5771"
         }
     },
     "installer": {
@@ -37,6 +41,9 @@
             },
             "32bit": {
                 "url": "https://github.com/PowerShell/PowerShell/releases/download/v$version/PowerShell-$version-win-x86.msi#/setup.msi_"
+            },
+            "arm64": {
+                "url": "https://github.com/PowerShell/PowerShell/releases/download/v$version/PowerShell-$version-win-arm64.msi#/setup.msi_"
             }
         }
     }
