@@ -1,10 +1,10 @@
 {
-    "version": "1.0-alpha9",
+    "version": "1.0-alpha10",
     "description": "GodSVG is an editor for Scalable Vector Graphics (SVG) files",
     "homepage": "https://www.godsvg.com",
     "license": "MIT",
-    "url": "https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha9/GodSVG.Windows.zip",
-    "hash": "58e9b38153a3e4e891f17dab56b682bc2f2e42acf25afb10365f6705a83f11e4",
+    "url": "https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha10/GodSVG.Windows.zip",
+    "hash": "0d76384bbe31df6b2ba6940868638e6d832d0f4ca8672e4f910640e9707b61fb",
     "shortcuts": [
         [
             "GodSVG.exe",
