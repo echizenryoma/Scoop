@@ -1,16 +1,16 @@
 {
-    "version": "5.7.1",
+    "version": "5.7.2",
     "description": "AirServer is the most advanced screen mirroring receiver for Mac and PC.",
     "license": "Proprietary",
     "homepage": "https://www.airserver.com",
     "architecture": {
         "64bit": {
-            "url": "https://dl.airserver.com/pc32/AirServer-5.7.1-x64.msi#/setup.msi_",
-            "hash": "335155a6ea74324ebed809d9b7f3a07a24ea180b10d6128003fb8379d4c4d551"
+            "url": "https://dl.airserver.com/pc32/AirServer-5.7.2-x64.msi#/setup.msi_",
+            "hash": "173685e9c546993d9956030587ee296b61947e8944878538abd5a598b91a9bfc"
         },
         "32bit": {
-            "url": "https://dl.airserver.com/pc32/AirServer-5.7.1-x86.msi#/setup.msi_",
-            "hash": "7a8994db58754c4c58dc3b40fc30418a40da3fe54cf74219f787013eefb0d59d"
+            "url": "https://dl.airserver.com/pc32/AirServer-5.7.2-x86.msi#/setup.msi_",
+            "hash": "6a0990ca4c8b637479233ca149714aff9ebe3fa5487133a499ca9a5fb04799d5"
         }
     },
     "installer": {
