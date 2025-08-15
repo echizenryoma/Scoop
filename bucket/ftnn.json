@@ -1,10 +1,10 @@
 {
-    "version": "15.28.12708",
+    "version": "15.28.12718",
     "description": "One-Stop Trading Platform for Hong Kong, US and China Connect Stocks",
     "homepage": "https://www.futunn.com",
     "license": "Freeware",
-    "url": "https://softwaredownload.futunn.com/FTNN_desktop_15.28.12708.exe#/dl.7z",
-    "hash": "59c057f2539e62b87890da145e44957852bc945fdfc765d6a1202f7c92023cca",
+    "url": "https://softwaredownload.futunn.com/FTNN_desktop_15.28.12718.exe#/dl.7z",
+    "hash": "9b8420e3725fb17918c0b05e809344f03bba95b455329afc64e2209a833ec530",
     "shortcuts": [
         [
             "FTNN.exe",
