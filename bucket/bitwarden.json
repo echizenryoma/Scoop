@@ -1,20 +1,20 @@
 {
-    "version": "2025.7.0",
+    "version": "2025.8.0",
     "description": "Password management solutions for individuals, teams, and business organizations",
     "homepage": "https://bitwarden.com",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/bitwarden/clients/releases/download/desktop-v2025.7.0/bitwarden-2025.7.0-ia32.nsis.7z",
-            "hash": "ef304634844f5816b8e93a3d2bdc0c83692fc710a00ff85891abdc3ed3cf3994"
+            "url": "https://github.com/bitwarden/clients/releases/download/desktop-v2025.8.0/bitwarden-2025.8.0-ia32.nsis.7z",
+            "hash": "6a9f4842e2c0ac96683d5a6b473f4493966a0208d1bb40f345e435898b17643b"
         },
         "64bit": {
-            "url": "https://github.com/bitwarden/clients/releases/download/desktop-v2025.7.0/bitwarden-2025.7.0-x64.nsis.7z",
-            "hash": "86ac3c31ee8a1d7720e5703c7c35548347bfc66c8c25507b29d0e258139621a8"
+            "url": "https://github.com/bitwarden/clients/releases/download/desktop-v2025.8.0/bitwarden-2025.8.0-x64.nsis.7z",
+            "hash": "9f822f4496155791ba1a842f01c4c965d5431d60d4fbfabaa5255e43e0f6ed53"
         },
         "arm64": {
-            "url": "https://github.com/bitwarden/clients/releases/download/desktop-v2025.7.0/bitwarden-2025.7.0-arm64.nsis.7z",
-            "hash": "77374e16837ff79f8f9e988c5ab21a0779bc563e19c544b328c16cb5c4f0c36d"
+            "url": "https://github.com/bitwarden/clients/releases/download/desktop-v2025.8.0/bitwarden-2025.8.0-arm64.nsis.7z",
+            "hash": "c1e459f5b92193237d49489429e435cd01fcb3538c7986a3ebf58f98b8334bb7"
         }
     },
     "pre_install": [
