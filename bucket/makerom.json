@@ -1,0 +1,17 @@
+{
+    "version": "0.18.4",
+    "description": "A CLI tool to create CTR (Nintendo 3DS) ROM images.",
+    "license": "Freeware",
+    "homepage": "https://github.com/3DSGuy/Project_CTR",
+    "url": "https://github.com/3DSGuy/Project_CTR/releases/download/makerom-v0.18.4/makerom-v0.18.4-win_x86_64.zip",
+    "hash": "d743507dc66d4c6f8efcce05ff8f5f47163a60e54e0e0c57fa12ec2f54acdf2f",
+    "bin": "makerom.exe",
+    "checkver": {
+        "url": "https://api.github.com/repos/3DSGuy/Project_CTR/releases",
+        "jsonpath": "$[?(@.name =~ /MakeROM.*/i)].tag_name",
+        "regex": "v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/3DSGuy/Project_CTR/releases/download/makerom-v$version/makerom-v$version-win_x86_64.zip"
+    }
+}
