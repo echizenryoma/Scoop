@@ -15,6 +15,7 @@
             "MiniLPA"
         ]
     ],
+    "pre_install": "if (!(Test-Path \"$persist_dir\\setting.yaml\")) { New-Item -ItemType File \"$dir\\setting.yaml\" | Out-Null }",
     "persist": [
         "logs",
         "setting.yaml"
