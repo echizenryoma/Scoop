@@ -1,0 +1,30 @@
+{
+    "version": "1.1.1",
+    "description": "Elegant Modern LPA UI",
+    "license": "GPL-3.0",
+    "homepage": "https://github.com/EsimMoe/MiniLPA",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/EsimMoe/MiniLPA/releases/download/v1.1.1/MiniLPA-Windows-x86_64.zip",
+            "hash": "19139adaae3428a25d84d94ea8723c7dd65bb880efcff1119a00f5bfa2f7b00b"
+        }
+    },
+    "shortcuts": [
+        [
+            "MiniLPA.exe",
+            "MiniLPA"
+        ]
+    ],
+    "persist": [
+        "logs",
+        "setting.yaml"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/EsimMoe/MiniLPA/releases/download/v$version/MiniLPA-Windows-x86_64.zip"
+            }
+        }
+    }
+}
