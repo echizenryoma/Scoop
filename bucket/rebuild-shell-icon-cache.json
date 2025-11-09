@@ -34,6 +34,9 @@
             ]
         }
     },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\ReIconCache.ini\")) { New-Item -Path \"$dir\\ReIconCache.ini\" -ItemType File | Out-Null }"
+    ],
     "persist": "ReIconCache.ini",
     "checkver": "Rebuild\\sShell\\sIcon\\sCache\\sv([\\d.]+)",
     "autoupdate": {
