@@ -1,12 +1,12 @@
 {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Download videos from almost any website worldwide",
     "homepage": "https://github.com/nexmoe/VidBee",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/nexmoe/VidBee/releases/download/v1.0.0/vidbee-1.0.0-setup.exe#/dl.7z",
-            "hash": "5e39507ba1d0623f84808aef889f8be42985b241b8951db439e9afca6645bb79",
+            "url": "https://github.com/nexmoe/VidBee/releases/download/v1.0.1/vidbee-1.0.1-setup.exe#/dl.7z",
+            "hash": "c8563e7f7319581c3da79638c5d1e1409bc76ec928b308a0be4cf55c16a31bdb",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*\" -Force -Recurse"
