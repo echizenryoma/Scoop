@@ -1,0 +1,60 @@
+{
+    "version": "1.11.3-6583016683339776",
+    "description": "Google Antigravity",
+    "homepage": "https://antigravity.google",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.11.3-6583016683339776/windows-x64/Antigravity.exe",
+            "hash": "532d42e6af276fe688021c517dae9d0dbc917d26f5520af6377ff0880a0d3c87"
+        },
+        "arm64": {
+            "url": "https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.11.3-6583016683339776/windows-arm64/Antigravity.exe",
+            "hash": "5d29919753170568f59949117138eae973c0ab7bfc8cec8f67ca3329a2c3ea77"
+        }
+    },
+    "env_add_path": "bin",
+    "shortcuts": [
+        [
+            "app/Antigravity.exe",
+            "Antigravity"
+        ]
+    ],
+    "innosetup": true,
+    "checkver": {
+        "script": [
+            "$page = Invoke-WebRequest -Uri 'https://antigravity.google/download'",
+            "$jsPath = (($page.Content -split '<|>' -match 'script src=\"main')[0] -split '\\s' -match 'src' -split '=')[1] -replace '\"'",
+            "$page = Invoke-WebRequest -Uri \"https://antigravity.google/$jsPath\"",
+            "$str = ($page.Content -split ';' -match 'windows-x64')[0]",
+            "$obj = $str.Substring($str.IndexOf('{')) | ConvertFrom-Json",
+            "$url = ($obj.downloadOptions | Where-Object os -Match 'windows').links[0].href",
+            "$path = $url -replace '^https://[^/]+/' -replace '/windows-x64.*$'",
+            "$version = ($path -split '/' -match '\\d+(\\.\\d+)+')[0]",
+            "Write-Output \"$version $path\""
+        ],
+        "regex": "(?<version>.+)\\s(?<path>.+)"
+    },
+    "extract_dir": [
+        "{code_GetDestDir}"
+    ],
+    "extract_to": "app",
+    "installer": {
+        "script": [
+            "if (Test-Path \"$dir\\{code_GetDestDir}\") {",
+            "    Get-ChildItem \"$dir\\{code_GetDestDir}\\*\" -Recurse | Move-Item -Destination \"$dir\" -Force",
+            "    Remove-Item \"$dir\\{code_GetDestDir}\" -Recurse -Force",
+            "}"
+        ]
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://edgedl.me.gvt1.com/$matchPath/windows-x64/Antigravity.exe"
+            },
+            "arm64": {
+                "url": "https://edgedl.me.gvt1.com/$matchPath/windows-arm64/Antigravity.exe"
+            }
+        }
+    }
+}
