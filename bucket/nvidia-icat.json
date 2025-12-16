@@ -1,7 +1,7 @@
 {
     "version": "0.6.17",
     "description": "Image Comparison & Analysis Tool (ICAT)",
-    "homepage": "https://www.nvidia.com/Download/index.aspx",
+    "homepage": "https://www.nvidia.com/en-us/geforce/technologies/icat/",
     "license": "Freeware",
     "architecture": {
         "64bit": {
