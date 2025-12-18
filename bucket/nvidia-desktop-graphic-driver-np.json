@@ -1,12 +1,12 @@
 {
-    "version": "591.44",
+    "version": "591.59",
     "description": "NVIDIA display driver (DCH)",
     "homepage": "https://www.nvidia.com/Download/index.aspx",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://us.download.nvidia.com/Windows/591.44/591.44-desktop-win10-win11-64bit-international-dch-whql.exe#/dl.7z",
-            "hash": "3f103b9673a75b502fa9ad9968531e3962af7a8efab9d887d11ea9ad0c4e14a8"
+            "url": "https://us.download.nvidia.com/Windows/591.59/591.59-desktop-win10-win11-64bit-international-dch-whql.exe#/dl.7z",
+            "hash": "6df5a901485f0d13234416346d1607cf6f13bc5e89026c7643f9dad90238a895"
         }
     },
     "extract_to": "setup",
