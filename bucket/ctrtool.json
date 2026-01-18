@@ -1,16 +1,16 @@
 {
-    "version": "1.2.1",
+    "version": "1.3.0",
     "description": "General purpose reading/extraction tool for Nintendo 3DS file formats.",
     "license": "Freeware",
     "homepage": "https://github.com/3DSGuy/Project_CTR",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/3DSGuy/Project_CTR/releases/download/ctrtool-v1.2.1/ctrtool-v1.2.1-win_x86.zip",
-            "hash": "0e65492289f5c96e45e55ca28336188732c8101ce894746769bc28497179a46e"
+            "url": "https://github.com/3DSGuy/Project_CTR/releases/download/ctrtool-v1.3.0/ctrtool-v1.3.0-win_x86.zip",
+            "hash": "1c1a3c520de8c9924bed4bd2165aa64f5752e36b4a1fcdfa85af062fa17bce75"
         },
         "64bit": {
-            "url": "https://github.com/3DSGuy/Project_CTR/releases/download/ctrtool-v1.2.1/ctrtool-v1.2.1-win_x64.zip",
-            "hash": "c1e0b87dd349a2c0e1c4ce6ca6170a8e4060e9960334252d0ae8224fbb231b21"
+            "url": "https://github.com/3DSGuy/Project_CTR/releases/download/ctrtool-v1.3.0/ctrtool-v1.3.0-win_x64.zip",
+            "hash": "8031dff3be72d0adb250fae1f969f27627e12a89ebc6dd074a15a75f87ddc949"
         }
     },
     "bin": "ctrtool.exe",
