@@ -1,10 +1,10 @@
 {
-    "version": "0.6.2",
+    "version": "0.7.0",
     "description": "A library for reading and writing Unreal Engine save files",
     "license": "MIT",
     "homepage": "https://github.com/trumank/uesave-rs",
-    "url": "https://github.com/trumank/uesave-rs/releases/download/v0.6.2/uesave_cli-x86_64-pc-windows-msvc.zip",
-    "hash": "c8556b7a48a9c50a7ed4ef6a07c1326a27c64db79971cb00971dde212498efcb",
+    "url": "https://github.com/trumank/uesave-rs/releases/download/v0.7.0/uesave_cli-x86_64-pc-windows-msvc.zip",
+    "hash": "8e6471266af6a175a0d55294f5fbedd57f033222330f384aefc4ede6de2dce4e",
     "bin": "uesave.exe",
     "checkver": {
         "github": "https://github.com/trumank/uesave-rs"
