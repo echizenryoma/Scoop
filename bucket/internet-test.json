@@ -1,10 +1,10 @@
 {
-    "version": "9.0.2.2508",
+    "version": "9.1.0.2602",
     "description": "Your Windows connection toolkit. Monitor, diagnose, and optimize internet connectivity with ease.",
     "homepage": "https://leocorporation.dev/store/internettest",
     "license": "MIT",
-    "url": "https://github.com/Leo-Corporation/InternetTest/releases/download/9.0.2.2508/InternetTest.exe",
-    "hash": "5fef7eb76117d16c0ceaf4f2706da3904faec31f51129e52b8aadc70231cd9cb",
+    "url": "https://github.com/Leo-Corporation/InternetTest/releases/download/9.1.0.2602/InternetTest.exe",
+    "hash": "bde22dcc7fc69e8685a468076d7e515d9e45f74da8f2ad26dca63163922bfe32",
     "shortcuts": [
         [
             "InternetTest.exe",
