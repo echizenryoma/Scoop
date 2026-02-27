@@ -1,12 +1,12 @@
 {
-    "version": "0.7.9.1",
+    "version": "0.7.9.2",
     "description": "lpac GUI Frontend",
     "license": "MIT",
     "homepage": "https://github.com/creamlike1024/EasyLPAC",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/creamlike1024/EasyLPAC/releases/download/0.7.9.1/EasyLPAC-windows-x86_64-with-lpac.zip",
-            "hash": "ac992d3b189144ded7a0bc0979e2b17fd5027c1af27fea8485ccdb70d8515b74"
+            "url": "https://github.com/creamlike1024/EasyLPAC/releases/download/0.7.9.2/EasyLPAC-windows-x86_64-with-lpac.zip",
+            "hash": "cfe3928e1fe92b77d0b630fb2fc74c5367e02ce855e506db5b5b2e18a4f142f7"
         }
     },
     "shortcuts": [
