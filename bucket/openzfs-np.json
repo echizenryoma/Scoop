@@ -1,10 +1,10 @@
 {
-    "version": "2.4.1rc3",
+    "version": "2.3.1rc14",
     "description": "The open source port of OpenZFS on Windows",
     "homepage": "https://openzfsonwindows.org",
     "license": "Freeware",
-    "url": "https://github.com/openzfsonwindows/openzfs/releases/download/zfswin-2.4.1rc3/OpenZFSOnWindows-debug-2.4.1rc3.exe#/setup.exe",
-    "hash": "d5cec6d6284a6ba32c36912fbe0512a9a635b4caf9a0925fc6402655569265ea",
+    "url": "https://github.com/openzfsonwindows/openzfs/releases/download/zfswin-2.3.1rc14/OpenZFSOnWindows-debug-2.3.1rc14.exe#/setup.exe",
+    "hash": "97c580ed64e463945bd0fcb724dca464fa139aadbd1aa48e0092a8feb3fd2072",
     "installer": {
         "args": [
             "/VERYSILENT",
@@ -15,9 +15,9 @@
     },
     "checkver": {
         "script": [
-            "$resp = Invoke-WebRequest -Uri 'https://api.github.com/repos/openzfsonwindows/openzfs/releases'",
+            "$resp = Invoke-WebRequest -Uri 'https://api.github.com/repos/openzfsonwindows/openzfs/releases/latest'",
             "$json = $resp.Content | ConvertFrom-Json",
-            "$json[0].tag_name -replace 'zfswin-',''"
+            "$json.tag_name -replace 'zfswin-',''"
         ],
         "regex": "(?<version>.+)"
     },
