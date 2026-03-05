@@ -1,0 +1,21 @@
+{
+    "version": "0.0.13",
+    "description": "A pull history analyzing tool for《Arknights：Endfield》.",
+    "homepage": "https://github.com/AiverAiva/Endfield-Permit-Export",
+    "license": "MIT",
+    "url": "https://github.com/AiverAiva/Endfield-Permit-Export/releases/download/v0.0.13/EndfieldPermitExport.zip",
+    "hash": "c62d03cfe47e5c439b372e63808beb5b1c0f57b88ebbd56ca6df065b6b7ccfd2",
+    "shortcuts": [
+        [
+            "EndfieldPermitExport.exe",
+            "EndfieldPermitExport"
+        ]
+    ],
+    "persist": "userData",
+    "checkver": {
+        "github": "https://github.com/AiverAiva/Endfield-Permit-Export"
+    },
+    "autoupdate": {
+        "url": "https://github.com/AiverAiva/Endfield-Permit-Export/releases/download/v$version/EndfieldPermitExport.zip"
+    }
+}
