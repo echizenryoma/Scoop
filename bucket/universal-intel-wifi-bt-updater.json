@@ -1,0 +1,30 @@
+{
+    "version": "24.0-2025.11.0",
+    "description": "This tool automatically fetches and installs the newest Intel Wi-Fi and Bluetooth drivers directly from Windows Update servers",
+    "license": "MIT",
+    "homepage": "https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater",
+    "url": "https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/download/v24.0.-2025.11.0/WiFi-BT-Updater-24.0-2025.11-Driver64-Win10-Win11.exe#/Universal-Intel-WiFi-BT-Updater.exe",
+    "hash": "1dfe33ee3e5b20d8b81b4ad83249ea8b4a6556b65ad11c3f330e6432c1c2c05e",
+    "bin": "Universal-Intel-WiFi-BT-Updater.exe",
+    "shortcuts": [
+        [
+            "Universal-Intel-WiFi-BT-Updater.exe",
+            "Universal Intel WiFi BT Updater"
+        ]
+    ],
+    "checkver": {
+        "script": [
+            "$resp = Invoke-WebRequest -Uri 'https://api.github.com/repos/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/latest'",
+            "$json = $resp.Content | ConvertFrom-Json",
+            "$major, $date = $json.tag_name.TrimStart('v') -split '\\.-'",
+            "$dateVersion = [version]$date",
+            "$shortDateVersion = \"$($dateVersion.Major).$($dateVersion.Minor)\"",
+            "$version = \"$major-$date\"",
+            "Write-Output \"$version $shortDateVersion\""
+        ],
+        "regex": "(?<version>.+)\\s(?<date>.+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/download/v$matchHead.$matchTail/WiFi-BT-Updater-$matchHead-$matchDate-Driver64-Win10-Win11.exe#/Universal-Intel-WiFi-BT-Updater.exe"
+    }
+}
