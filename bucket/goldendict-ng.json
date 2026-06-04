@@ -1,12 +1,12 @@
 {
-    "version": "v26.5.6",
+    "version": "v26.5.7",
     "description": "A feature-rich dictionary lookup program, supporting multiple dictionary formats (StarDict/Babylon/Lingvo/Dictd/AARD/MDict/SDict) and online dictionaries, featuring perfect article rendering with the complete markup, illustrations and other content retained, and allowing you to type in words without any accents or correct case.",
     "license": "GPL-3.0-or-later",
     "homepage": "https://github.com/xiaoyifang/goldendict",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/xiaoyifang/goldendict-ng/releases/download/v26.5.6/GoldenDict-ng-26.5.6-Qt6.8.3-Windows.7z",
-            "hash": "c4acadd4d50c81cdacd71f69dba7dc46281a9f0ebb924b441707ca22e192596a",
+            "url": "https://github.com/xiaoyifang/goldendict-ng/releases/download/v26.5.7/GoldenDict-ng-26.5.7-Qt6.8.3-Windows.7z",
+            "hash": "4cbc0b6d0a79020e89f36916d340ea64396d77d525f76214db7e9e981e30551d",
             "shortcuts": [
                 [
                     "GoldenDict.exe",
