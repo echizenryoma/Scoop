@@ -1,10 +1,10 @@
 {
-    "version": "2026.06.0007",
+    "version": "2026.07.0008",
     "description": "This tool automatically fetches and installs the newest Intel Wi-Fi and Bluetooth drivers directly from Windows Update servers",
     "license": "MIT",
     "homepage": "https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater",
-    "url": "https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/download/v2026.06.0007/WiFi-BT-Updater-2026.06.0007-Win10-Win11.exe#/Universal-Intel-WiFi-BT-Updater.exe",
-    "hash": "d6f6f0b58216d0dce044faddf4844dca234175cae6aba87d4ff7cbd003bd3dee",
+    "url": "https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/download/v2026.07.0008/WiFi-BT-Updater-2026.07.0008-Win10-Win11.exe#/Universal-Intel-WiFi-BT-Updater.exe",
+    "hash": "4fcb208a0db4eba8c43beefa1dea8c6dfa79a53c037ed073fb24560c4d6a3c5d",
     "bin": "Universal-Intel-WiFi-BT-Updater.exe",
     "shortcuts": [
         [
