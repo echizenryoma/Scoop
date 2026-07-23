@@ -1,10 +1,10 @@
 {
-    "version": "3.5.5",
+    "version": "3.6.0",
     "description": "Manage your iPhone. Your way.",
     "license": "Proprietary",
     "homepage": "https://imazing.com/",
-    "url": "https://downloads.imazing.com/windows/iMazing/3.5.5/iMazing_3.5.5.exe#/setup.exe",
-    "hash": "f0d4b2869f0beff57b0879713d041f09e2c26651f21719c612ce58220d535986",
+    "url": "https://downloads.imazing.com/windows/iMazing/3.6.0/iMazing_3.6.0.exe#/setup.exe",
+    "hash": "6c7cc7876da617b45cbc8e8bc265a993f0176fe584379f8809ea02696d597496",
     "installer": {
         "args": [
             "/verysilent",
