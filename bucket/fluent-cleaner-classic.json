@@ -1,0 +1,43 @@
+{
+    "version": "26.07.04",
+    "description": "modern, transparent, no spyware, no scareware, no dark patterns, no upsell garbage, no fake registry magic",
+    "license": "MIT",
+    "homepage": "https://github.com/builtbybel/FluentCleaner",
+    "url": [
+        "https://github.com/builtbybel/FluentCleaner/releases/download/26.07.04/FluentCleaner-Classic-net48.zip",
+        "https://github.com/builtbybel/FluentCleaner/releases/download/26.07.04/Custom.zip"
+    ],
+    "hash": [
+        "736e19d7622dfe0f95b7b879be8ca54736550de3b828aafb0b27392945d94c75",
+        "e955f87694c7ba098840905bd97b0b3673178bee08f3adf242159bc63329e587"
+    ],
+    "extract_dir": [
+        "FluentCleaner-Classic-net48",
+        ""
+    ],
+    "pre_install": [
+        "if (!(Test-Path \"$dir\\Winapp2.ini\")) {",
+        "    New-Item -Path \"$dir\\Winapp2.ini\" -ItemType File | Out-Null",
+        "}",
+        "if (!(Test-Path \"$dir\\Winapp3.ini\")) {",
+        "    New-Item -Path \"$dir\\Winapp3.ini\" -ItemType File | Out-Null",
+        "}"
+    ],
+    "persist": [
+        "Winapp2.ini",
+        "Winapp3.ini"
+    ],
+    "shortcuts": [
+        [
+            "FluentCleaner.Classic.exe",
+            "FluentCleaner Classic"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": [
+            "https://github.com/builtbybel/FluentCleaner/releases/download/$version/FluentCleaner-Classic-net48.zip",
+            "https://github.com/builtbybel/FluentCleaner/releases/download/$version/Custom.zip"
+        ]
+    }
+}
