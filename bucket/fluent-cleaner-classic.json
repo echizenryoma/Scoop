@@ -1,14 +1,14 @@
 {
-    "version": "26.07.05",
+    "version": "26.08.01",
     "description": "modern, transparent, no spyware, no scareware, no dark patterns, no upsell garbage, no fake registry magic",
     "license": "MIT",
     "homepage": "https://github.com/builtbybel/FluentCleaner",
     "url": [
-        "https://github.com/builtbybel/FluentCleaner/releases/download/26.07.05/FluentCleaner-Classic-net48.zip",
-        "https://github.com/builtbybel/FluentCleaner/releases/download/26.07.05/Custom.zip"
+        "https://github.com/builtbybel/FluentCleaner/releases/download/26.08.01/FluentCleaner-Classic-net48.zip",
+        "https://github.com/builtbybel/FluentCleaner/releases/download/26.08.01/Custom.zip"
     ],
     "hash": [
-        "f0b16604570f8c03693ad7796b0deeef6d277e1a736eadb29cc01c0dcf88457b",
+        "40ac44b6fd9fa9acc78c17fa4b5dddfbed3911cefc9a2140f61fa7c31811c2dc",
         "e955f87694c7ba098840905bd97b0b3673178bee08f3adf242159bc63329e587"
     ],
     "extract_dir": [
