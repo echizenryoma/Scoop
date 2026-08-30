@@ -8,54 +8,30 @@
     "homepage": "http://www.softwareok.com/?seite=Microsoft/NewFileTime",
     "architecture": {
         "32bit": {
-            "url": [
-                "https://www.softwareok.com/Download/NewFileTime.zip",
-                "https://www.softwareok.com/Download/NewFileTime_Unicode.zip"
-            ],
-            "hash": [
-                "4cea5c9ea665cd6db6819926379ef3c3793913596fddeb28bc88ef5b1b6a287e",
-                "9d095c27bcecf961ca305db0ad159e67ad770154d84aed0707bef54bcfb95956"
-            ],
+            "url": "https://www.softwareok.com/Download/NewFileTime.zip",
+            "hash": "4cea5c9ea665cd6db6819926379ef3c3793913596fddeb28bc88ef5b1b6a287e",
             "shortcuts": [
                 [
                     "NewFileTime.exe",
                     "NewFileTime"
-                ],
-                [
-                    "NewFileTime_uc.exe",
-                    "NewFileTime (Unicode)"
                 ]
             ],
-            "bin": [
-                "NewFileTime.exe",
-                "NewFileTime_uc.exe"
-            ]
+            "bin": "NewFileTime.exe"
         },
         "64bit": {
-            "url": [
-                "https://www.softwareok.com/Download/NewFileTime_x64.zip",
-                "https://www.softwareok.com/Download/NewFileTime_Unicode.zip"
-            ],
-            "hash": [
-                "58f2cf43399b107f0bb95f5ec938b851ae18d7b5628bd4e026286e12e3d4cc9d",
-                "9d095c27bcecf961ca305db0ad159e67ad770154d84aed0707bef54bcfb95956"
-            ],
+            "url": "https://www.softwareok.com/Download/NewFileTime_x64.zip",
+            "hash": "58f2cf43399b107f0bb95f5ec938b851ae18d7b5628bd4e026286e12e3d4cc9d",
             "shortcuts": [
                 [
                     "NewFileTime_x64.exe",
                     "NewFileTime"
-                ],
-                [
-                    "NewFileTime_uc.exe",
-                    "NewFileTime (Unicode)"
                 ]
             ],
             "bin": [
                 [
                     "NewFileTime_x64.exe",
                     "NewFileTime"
-                ],
-                "NewFileTime_uc.exe"
+                ]
             ]
         }
     },
@@ -66,16 +42,10 @@
     "autoupdate": {
         "architecture": {
             "32bit": {
-                "url": [
-                    "https://www.softwareok.com/Download/NewFileTime.zip",
-                    "https://www.softwareok.com/Download/NewFileTime_Unicode.zip"
-                ]
+                "url": "https://www.softwareok.com/Download/NewFileTime.zip"
             },
             "64bit": {
-                "url": [
-                    "https://www.softwareok.com/Download/NewFileTime_x64.zip",
-                    "https://www.softwareok.com/Download/NewFileTime_Unicode.zip"
-                ]
+                "url": "https://www.softwareok.com/Download/NewFileTime_x64.zip"
             }
         }
     }
