@@ -5,7 +5,7 @@
     "homepage": "https://github.com/builtbybel/FluentCleaner",
     "url": "https://github.com/builtbybel/FluentCleaner/releases/download/26.08.03/FluentCleaner-Classic-net48.zip",
     "hash": "42b2ba87792491ba07bd4ae4a70486e01a6f1effb5f23870767234062a6f78a4",
-    "extract_dir": "FluentCleaner-Classic-net48",
+    "extract_dir": "FluentCleaner-net48",
     "pre_install": [
         "if (!(Test-Path \"$dir\\Winapp2.ini\")) {",
         "    New-Item -Path \"$dir\\Winapp2.ini\" -ItemType File | Out-Null",
