@@ -1,10 +1,10 @@
 {
-    "version": "26.08.01",
+    "version": "26.08.03",
     "description": "modern, transparent, no spyware, no scareware, no dark patterns, no upsell garbage, no fake registry magic",
     "license": "MIT",
     "homepage": "https://github.com/builtbybel/FluentCleaner",
-    "url": "https://github.com/builtbybel/FluentCleaner/releases/download/26.08.01/FluentCleaner-Classic-net48.zip",
-    "hash": "40ac44b6fd9fa9acc78c17fa4b5dddfbed3911cefc9a2140f61fa7c31811c2dc",
+    "url": "https://github.com/builtbybel/FluentCleaner/releases/download/26.08.03/FluentCleaner-Classic-net48.zip",
+    "hash": "42b2ba87792491ba07bd4ae4a70486e01a6f1effb5f23870767234062a6f78a4",
     "extract_dir": "FluentCleaner-Classic-net48",
     "pre_install": [
         "if (!(Test-Path \"$dir\\Winapp2.ini\")) {",
