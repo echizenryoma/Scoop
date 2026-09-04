@@ -1,10 +1,10 @@
 {
-    "version": "0.1.7",
+    "version": "0.1.8",
     "description": "本地 · 离线 · 批量音视频 → SRT 字幕",
     "homepage": "https://github.com/eclipse005/OneAsr",
     "license": "MIT",
-    "url": "https://github.com/eclipse005/OneAsr/releases/download/v0.1.7/OneAsr_0.1.7_portable.zip",
-    "hash": "9c8d5634a25a16cbff50b55f3ae72c6d79b670e73a491f3a5c10c5e5f7e019e3",
+    "url": "https://github.com/eclipse005/OneAsr/releases/download/v0.1.8/OneAsr_0.1.8_portable.zip",
+    "hash": "792e094266d9e4896a6ed460e27b6fd679cd8b872e112282b5fc42f6feae30f1",
     "bin": "oneasr-cli.exe",
     "shortcuts": [
         [
