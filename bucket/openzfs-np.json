@@ -1,10 +1,10 @@
 {
-    "version": "2.4.1rc15h",
+    "version": "2.4.1rc15i",
     "description": "The open source port of OpenZFS on Windows",
     "homepage": "https://github.com/openzfsonwindows/openzfs",
     "license": "Freeware",
-    "url": "https://github.com/openzfsonwindows/openzfs/releases/download/zfswin-2.4.1rc15/OpenZFSOnWindows-debug-2.4.1rc15h.exe#/setup.exe",
-    "hash": "7bdd1e02a664b11b047cd637ee01aaa20d65ec3bbc4f106f0c4555b3af2df8a5",
+    "url": "https://github.com/openzfsonwindows/openzfs/releases/download/zfswin-2.4.1rc15/OpenZFSOnWindows-debug-2.4.1rc15i.exe#/setup.exe",
+    "hash": "c84323e25f52e5ca0d928ef8f23b19331ec450cfd5d2a3d0943db9bf93cd908c",
     "installer": {
         "args": [
             "/VERYSILENT",
