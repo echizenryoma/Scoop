@@ -1,10 +1,10 @@
 {
-    "version": "2.15.1",
+    "version": "2.16.0",
     "description": "A visually appealing and feature-rich Flutter music player",
     "license": "GPL-3.0-or-later",
     "homepage": "https://axel10.github.io/vynody_site/",
-    "url": "https://github.com/axel10/vynody/releases/download/2.15.1/vynody-windows-2.15.1.zip",
-    "hash": "31154230407d5cb187166d0f13dea0d6aee2c326de7b83ed1071fbfcaca8d0dd",
+    "url": "https://github.com/axel10/vynody/releases/download/2.16.0/vynody-windows-2.16.0.zip",
+    "hash": "1ed463f21de8b1285e2d0773b75401216db99ef0e4d0bf3d48e7c48ea94fa508",
     "shortcuts": [
         [
             "Vynody.exe",
