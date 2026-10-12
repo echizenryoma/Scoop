@@ -1,0 +1,20 @@
+{
+    "version": "3.8.0",
+    "description": "Free, open-source system cleaner and security scanner",
+    "homepage": "https://usekudu.com",
+    "license": "MIT",
+    "url": "https://github.com/AdventDevInc/kudu/releases/download/v3.8.0/Kudu-Portable-3.8.0-x64.zip",
+    "hash": "22bb41d2ca20dff473b5cce6dde6812a72c974815675b946388af2314632bc2b",
+    "shortcuts": [
+        [
+            "Kudu.exe",
+            "Kudu"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/AdventDevInc/kudu"
+    },
+    "autoupdate": {
+        "url": "https://github.com/AdventDevInc/kudu/releases/download/v$version/Kudu-Portable-$version-x64.zip"
+    }
+}
