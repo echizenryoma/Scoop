@@ -1,12 +1,12 @@
 {
-    "version": "0.6.4",
+    "version": "0.6.5",
     "description": "QQ 宠物跨平台复刻，基于 Arctic Penguin T800 逆向重建。",
     "homepage": "https://pet.ankio.net/",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AnkioTomas/qqpet/releases/download/v0.6.4/QQPet.Setup.0.6.4.exe#/dl.7z",
-            "hash": "5f4d08c1599a0b93507c7f8e6b1b5afe54645c935003f29fa9255173a77cc603",
+            "url": "https://github.com/AnkioTomas/qqpet/releases/download/v0.6.5/QQPet.Setup.0.6.5.exe#/dl.7z",
+            "hash": "20c9d8f6c3ca2bfeb2529a261ceebd6c60ba583a7ed67a68c584dc2829828cc4",
             "pre_install": [
                 "$file = (Get-ChildItem -File -Filter 'app-64.7z' -Path \"$original_dir/tmp\" -Recurse)[0].FullName",
                 "Expand-7ZipArchive $file \"$original_dir\"",
