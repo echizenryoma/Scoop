@@ -1,10 +1,18 @@
 {
-    "version": "ARM64-2.4.4rc8",
+    "version": "2.4.4rc8",
     "description": "The open source port of OpenZFS on Windows",
     "homepage": "https://github.com/openzfsonwindows/openzfs",
-    "license": "Freeware",
-    "url": "https://github.com/openzfsonwindows/openzfs/releases/download/zfswin-2.4.4rc8/OpenZFSOnWindows-ARM64-2.4.4rc8.exe#/setup.exe",
-    "hash": "f036ed37682bfd15f7b16b385a19d7ce5ec5d6861100e78c264e44f360d19030",
+    "license": "Public Domain",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/openzfsonwindows/openzfs/releases/download/zfswin-2.4.4rc8/OpenZFSOnWindows-2.4.4rc8.exe#/setup.exe",
+            "hash": "eeae54b58a48acd30e5e7035022d37a825f5b42a506ed26ca925c9a9d01b6864"
+        },
+        "arm64": {
+            "url": "https://github.com/openzfsonwindows/openzfs/releases/download/zfswin-2.4.4rc8/OpenZFSOnWindows-ARM64-2.4.4rc8.exe#/setup.exe",
+            "hash": "f036ed37682bfd15f7b16b385a19d7ce5ec5d6861100e78c264e44f360d19030"
+        }
+    },
     "installer": {
         "args": [
             "/VERYSILENT",
@@ -17,13 +25,19 @@
         "script": [
             "$resp = Invoke-WebRequest -Uri 'https://api.github.com/repos/openzfsonwindows/openzfs/releases'",
             "$json = $resp.Content | ConvertFrom-Json",
-            "$tag = $json[0].tag_name -replace 'zfswin-',''",
-            "$version = ($json[0].assets | Sort-Object updated_at)[-1].name -replace 'OpenZFSOnWindows-','' -replace '.exe',''",
-            "Write-Output \"$version $tag\""
+            "$version = $json[0].tag_name -replace 'zfswin-',''",
+            "Write-Output \"$version\""
         ],
-        "regex": "(?<version>.+)\\s(?<tag>.+)"
+        "regex": "(?<version>.+)"
     },
     "autoupdate": {
-        "url": "https://github.com/openzfsonwindows/openzfs/releases/download/zfswin-$matchTag/OpenZFSOnWindows-$version.exe#/setup.exe"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/openzfsonwindows/openzfs/releases/download/zfswin-$version/OpenZFSOnWindows-$version.exe#/setup.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/openzfsonwindows/openzfs/releases/download/zfswin-$version/OpenZFSOnWindows-ARM64-$version.exe#/setup.exe"
+            }
+        }
     }
 }
