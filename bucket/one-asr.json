@@ -20,6 +20,6 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/eclipse005/OneAsr/releases/download/v$version/OneAsr_$version_portable.zip"
+        "url": "https://github.com/eclipse005/OneAsr/releases/download/v$version/OneAsr_$version_windows_portable.zip"
     }
 }
