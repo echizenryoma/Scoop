@@ -1,5 +1,5 @@
 {
-    "version": "20.0.8.0",
+    "version": "20.0.14.0",
     "description": "Kaspersky Virus Removal Tool",
     "homepage": "https://www.kaspersky.com/downloads/free-virus-removal-tool",
     "license": {
@@ -7,7 +7,7 @@
         "url": "https://www.kaspersky.com/end-user-license-agreement"
     },
     "url": "https://devbuilds.s.kaspersky-labs.com/devbuilds/KVRT/latest/full/KVRT.exe",
-    "hash": "004139063c099109cb075ccd6dad44debd3a10050dcefcb35bb15dc37a447267",
+    "hash": "cf06b5c614c36c8a2bcf0cae0371d9d1fcc3362978e970e7e3669a18363d8094",
     "bin": "KVRT.exe",
     "shortcuts": [
         [
