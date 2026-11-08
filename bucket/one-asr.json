@@ -1,6 +1,6 @@
 {
     "version": "1.4.1",
-    "description": "本地 · 离线 · 批量音视频 → SRT 字幕",
+    "description": "Local · Offline · Batch audio/video → SRT / ASS / TXT subtitles",
     "homepage": "https://github.com/eclipse005/OneAsr",
     "license": "MIT",
     "url": "https://github.com/eclipse005/OneAsr/releases/download/v1.4.1/OneAsr_1.4.1_windows_portable.zip",
