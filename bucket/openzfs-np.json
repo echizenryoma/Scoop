@@ -1,16 +1,12 @@
 {
-    "version": "2.4.4rc8",
+    "version": "2.4.4rc9",
     "description": "The open source port of OpenZFS on Windows",
     "homepage": "https://github.com/openzfsonwindows/openzfs",
     "license": "Public Domain",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/openzfsonwindows/openzfs/releases/download/zfswin-2.4.4rc8/OpenZFSOnWindows-2.4.4rc8.exe#/setup.exe",
-            "hash": "eeae54b58a48acd30e5e7035022d37a825f5b42a506ed26ca925c9a9d01b6864"
-        },
-        "arm64": {
-            "url": "https://github.com/openzfsonwindows/openzfs/releases/download/zfswin-2.4.4rc8/OpenZFSOnWindows-ARM64-2.4.4rc8.exe#/setup.exe",
-            "hash": "f036ed37682bfd15f7b16b385a19d7ce5ec5d6861100e78c264e44f360d19030"
+            "url": "https://github.com/openzfsonwindows/openzfs/releases/download/zfswin-2.4.4rc9/OpenZFSOnWindows-2.4.4rc9.exe#/setup.exe",
+            "hash": "d0780431af85e275a720393a0f501269d220ba89a3d6c075f5866b4337542b76"
         }
     },
     "installer": {
@@ -34,9 +30,6 @@
         "architecture": {
             "64bit": {
                 "url": "https://github.com/openzfsonwindows/openzfs/releases/download/zfswin-$version/OpenZFSOnWindows-$version.exe#/setup.exe"
-            },
-            "arm64": {
-                "url": "https://github.com/openzfsonwindows/openzfs/releases/download/zfswin-$version/OpenZFSOnWindows-ARM64-$version.exe#/setup.exe"
             }
         }
     }
