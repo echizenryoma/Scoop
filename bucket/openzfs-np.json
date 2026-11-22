@@ -1,12 +1,12 @@
 {
-    "version": "2.4.4rc9",
+    "version": "2.4.4rc9b",
     "description": "The open source port of OpenZFS on Windows",
     "homepage": "https://github.com/openzfsonwindows/openzfs",
     "license": "Public Domain",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/openzfsonwindows/openzfs/releases/download/zfswin-2.4.4rc9/OpenZFSOnWindows-2.4.4rc9.exe#/setup.exe",
-            "hash": "d0780431af85e275a720393a0f501269d220ba89a3d6c075f5866b4337542b76"
+            "url": "https://github.com/openzfsonwindows/openzfs/releases/download/zfswin-2.4.4rc9/OpenZFSOnWindows-2.4.4rc9b.exe#/setup.exe",
+            "hash": "bd7674a41de8c288fe128c9e71bb6b9a0ea46827968fa8e81cd8d1b55a091b9a"
         }
     },
     "installer": {
@@ -19,17 +19,19 @@
     },
     "checkver": {
         "script": [
-            "$resp = Invoke-WebRequest -Uri 'https://api.github.com/repos/openzfsonwindows/openzfs/releases'",
+            "$resp = Invoke-WebRequest -Uri 'https://api.github.com/repos/openzfsonwindows/openzfs/releases/latest'",
             "$json = $resp.Content | ConvertFrom-Json",
-            "$version = $json[0].tag_name -replace 'zfswin-',''",
-            "Write-Output \"$version\""
+            "$tag = $json.tag_name -replace 'zfswin-',''",
+            "$obj = ($json.assets | Sort-Object -Descending updated_at)[0]",
+            "$version = $obj.name -split '-|\\.exe' -match '^\\d+'",
+            "Write-Output \"$version $tag\""
         ],
-        "regex": "(?<version>.+)"
+        "regex": "(?<version>.+)\\s(?<tag>.+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/openzfsonwindows/openzfs/releases/download/zfswin-$version/OpenZFSOnWindows-$version.exe#/setup.exe"
+                "url": "https://github.com/openzfsonwindows/openzfs/releases/download/zfswin-$matchTag/OpenZFSOnWindows-$version.exe#/setup.exe"
             }
         }
     }
